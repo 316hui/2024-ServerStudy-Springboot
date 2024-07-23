@@ -12,6 +12,11 @@ public interface BoardMapper {
 	
 	public void createBoard(Board board);
 	public Board readBoard(int idx);
-	public void updateBoard(int idx);
 	public void deleteBoard(int idx);
+	public void updateBoard(Board board);
+	
+	public List<Board> getAllBoards();
+	public void increaseViews(Board board);
+
+	
 }

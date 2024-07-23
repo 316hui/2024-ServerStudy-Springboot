@@ -19,7 +19,6 @@ public class BoardServiceImpl implements BoardService{
 	}
 	
 	
-	
 	@Override
 	public void createBoard(Board board) {
 		//boardmapper.createBoard(board);
@@ -27,26 +26,32 @@ public class BoardServiceImpl implements BoardService{
 	}
 	@Override
 	public Board readBoard(int idx) {
-		return null;
-		//return boardmapper.readBoard(idx);
+		return boardmapper.readBoard(idx);
 		
 	}
 	@Override
 	public void updateBoard(Board board) {
-		//boardmapper.updateBoard(board);
+		boardmapper.updateBoard(board);
 		
 	}
 	@Override
 	public void deleteBoard(int idx) {
-		//boardmapper.deleteBoard(idx);
+		boardmapper.deleteBoard(idx);
 		
 	}
 
 	@Override
 	public List<Board> getAllBoards() {
-		// TODO Auto-generated method stub
-		return null;
+		return boardmapper.getAllBoards();
 	}
+
+
+	@Override
+	public void increaseViews(Board board) {
+		boardmapper.increaseViews(board);
+		
+	}
+	
 	
 	
 	

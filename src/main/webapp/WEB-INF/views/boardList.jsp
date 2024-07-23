@@ -82,7 +82,7 @@
       
 			<c:forEach items="${boards}" var="board" varStatus="status">
 				<tr>
-					<td><a href="board-detail.do?b_idx=${board.b_idx}">${board.rownum}</a></td>
+					<td><a href="/readBoard?b_idx=${board.b_idx}">${board.rownum}</a></td>
 					<td>${board.b_title}</td>
 					<td>${board.b_content}</td>
 					<td>${board.b_views}</td>
@@ -97,7 +97,7 @@
 			 <c:choose>
 				<c:when test="${ pagination.prevPage ge 5}">
 					<li>
-						<a href="board-list.do?page=${pagination.prevPage}">
+						<a href="/boardList?page=${pagination.prevPage}">
 							◀
 						</a>
 					</li>
@@ -121,7 +121,7 @@
 			 <c:choose>
 				<c:when test="${ pagination.nextPage lt pagination.lastPage }">
 					<li style="">
-						<a href="board-list.do?page=${pagination.nextPage}">▶</a>
+						<a href="/boardList?page=${pagination.nextPage}">▶</a>
 					</li>
 				</c:when>
 			</c:choose> 

@@ -8,4 +8,53 @@
         b_writer as bWriter
         FROM            lc_board
     </select>
+    
+    <insert id="createBoard" parameterType="Board">
+    	INSERT		INTO	lc_board(
+			b_id, 
+			b_title,
+			b_content, 
+			b_writer
+			
+    	)VALUES(
+    		#{bId},
+    		#{bTItle},
+    		#{bContent},
+    		#{bWriter}
+    </insert>
+    
+    <select id="readBoard" resultType="Board">
+			SELECT 		*
+			FROM 		lc_board	ta
+			LEFT JOIN   lc_user		tb
+			ON			ta.b_id = tb.u_id
+			WEHRE		b_id = #{bId}  		
+    </select>
+    
+    <insert id="updateBoard" parameterType="Board">
+    	UPDATE		lc_board
+    	SET			b_title(#{bTitle)),
+    				b_content(#{bContnet})
+    				
+    	WHERE 		1=1
+    	AND			b_id = #{bId}
+    </insert>
+    
+    <delete id="deleteBoard" parameterType="int">
+    	DELETE		
+    	FROM		lc_board
+    	WHERE		b_id = #{bId}
+    </delete>
+    
+    <select id="getAllBoards" resultType="Board">
+    	SELECT		*
+    	FROM		lc_board
+    	
+    </select>
+    
+    <update id="increaseViews" parameterType="Board">
+    	UPDATE		lc_board
+    	SET			b_views = b_views+1 
+    	WHERE		b_id = #{bId}
+    </update>
 </mapper>
