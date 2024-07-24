@@ -63,11 +63,5 @@ public class SecurityConfig{
         return http.build();
     }
     
-    @Bean
-    public BoardService boardService() {
-    	return new BoardServiceImpl();
-    }
-
-    
 
 }

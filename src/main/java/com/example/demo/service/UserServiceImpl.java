@@ -49,22 +49,4 @@ public class UserServiceImpl implements UserService {
 	    public User readUser(String username) {
 	        return userMapper.readUser(username);
 	    }
-	    
-	    
-
-	    
-		@Override
-		public int getUsersCount(Pagination pagination) {
-			//return userMapper.getUsersCount(pagination);
-			return 0;
-		}
-
-		@Override
-		public List<User> getUsers(Pagination pagination) {
-			//return userMapper.getUsers(pagination);
-			return null;
-		}
-		
-		
-	    
 }

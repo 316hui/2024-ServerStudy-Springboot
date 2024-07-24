@@ -18,4 +18,3 @@ public class Search {
 		this.keyword = keyword;
 	}
 }
-//ff

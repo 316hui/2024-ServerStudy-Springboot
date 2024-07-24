@@ -6,6 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.origin.SystemEnvironmentOrigin;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -18,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.domain.Board;
+import com.example.demo.domain.Pagination;
+import com.example.demo.domain.Search;
 import com.example.demo.domain.User;
 import com.example.demo.service.BoardService;
 import com.example.demo.service.UserService;
@@ -96,14 +99,26 @@ public class Controller {
 	}
 	
 	
-	//Code about Board below this line
-	private Board board;
-	private List<Board> boards;
+	
 	
 	@RequestMapping("/boardList")
-	public String boardList(Model model) {
-		boards = boardservice.getAllBoards();
-		model.addAttribute("boards", boards);
+	public String boardList(
+			Model model, 
+			Search search, 
+			@RequestParam(value="page", required=false, defaultValue="1") int page) {
+		logger.debug("check page {}", page);
+		int count = 0;
+		
+		Pagination pagination = new Pagination();
+		pagination.setPage(page);
+		pagination.setSearch(search);
+		
+		count = boardservice.getboardsCount(pagination);
+		pagination.setCount(count);
+		pagination.build();
+		
+		/*List<Board> boards = boardservice.getAllBoards();
+		model.addAttribute("boards", boards);*/
 		return "/boardList";
 	}
 	
@@ -116,8 +131,9 @@ public class Controller {
 
 	@RequestMapping("/readBoard")
 	public String readBoard(@ModelAttribute("bTitle") int idx, Model model) {
-		board = boardservice.readBoard(idx);
-		model.addAttribute("board", board);
+		/*board = boardservice.readBoard(idx);
+		boardservice.increaseViews(board); //조회수 올리기
+		model.addAttribute("board", board);*/
 		
 		return "/detailBoard";
 	}

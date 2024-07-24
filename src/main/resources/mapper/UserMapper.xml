@@ -65,12 +65,4 @@
 			u_id = #{username}
 		
 	</insert>
-	
-	<select id="getUsersCount" parameterType="Pagination">
-		SELECT 	COUNT(*)
-		FROM	lc_user
-	</select>
-	
-	<select id="getUsers" parameterType="Pagination">
-	</select>
 </mapper>

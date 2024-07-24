@@ -49,7 +49,7 @@
 </head>
 <body>
     <div class="add-button">
-        <a href="/boardList">
+        <a href="/createBoard">
             <button>게시물 등록</button>
         </a>
     </div>

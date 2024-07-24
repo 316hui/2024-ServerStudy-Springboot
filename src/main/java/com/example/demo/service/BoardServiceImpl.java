@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.domain.Board;
+import com.example.demo.domain.Pagination;
+import com.example.demo.domain.User;
 import com.example.demo.mapper.BoardMapper;
 
 @Service("BoardServiceImpl")
@@ -45,12 +47,25 @@ public class BoardServiceImpl implements BoardService{
 		return boardmapper.getAllBoards();
 	}
 
+	
+	
 
 	@Override
 	public void increaseViews(Board board) {
 		boardmapper.increaseViews(board);
 		
 	}
+	
+	@Override
+	public int getboardsCount(Pagination pagination) {
+		return boardmapper.getboardsCount(pagination);
+	}
+
+	@Override
+	public List<User> getUsers(Pagination pagination) {
+		return boardmapper.getUsers(pagination);
+	}
+	
 	
 	
 	

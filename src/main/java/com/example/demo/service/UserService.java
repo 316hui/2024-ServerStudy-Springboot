@@ -20,7 +20,4 @@ public interface UserService extends UserDetailsService{
 	Collection<GrantedAuthority> getAuthorities(String username); //시큐리티 권한 얻기
 
 	
-	
-	public int getUsersCount(Pagination pagination);
-	public List<User> getUsers(Pagination pagination);
 }
