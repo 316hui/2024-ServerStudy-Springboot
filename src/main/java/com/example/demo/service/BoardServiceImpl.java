@@ -43,8 +43,8 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public List<Board> getAllBoards() {
-		return boardmapper.getAllBoards();
+	public List<Board> getAllBoards(Pagination paginaton) {
+		return boardmapper.getAllBoards(paginaton);
 	}
 
 	

@@ -96,8 +96,8 @@
 		</tr>
 		
 		<div class="button-container">
-        	<button onclick="location.href='/updateBoard?b_idx=${board.bId }'">수정</button>
-        	<button onclick="location.href='/deleteBoard?b_idx=${board.bId }'">삭제</button>
+        	<button onclick="location.href='/updateBoard?b_id=${board.bId }'">수정</button>
+        	<button onclick="location.href='/deleteBoard?b_id=${board.bId }'">삭제</button>
     	</div>
 	</table>
 	

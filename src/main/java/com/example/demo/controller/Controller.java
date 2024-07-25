@@ -117,8 +117,8 @@ public class Controller {
 		pagination.setCount(count);
 		pagination.build();
 		
-		/*List<Board> boards = boardservice.getAllBoards();
-		model.addAttribute("boards", boards);*/
+		List<Board> boards = boardservice.getAllBoards(pagination);
+		model.addAttribute("boards", boards);
 		return "/boardList";
 	}
 	
@@ -130,10 +130,11 @@ public class Controller {
 	}
 
 	@RequestMapping("/readBoard")
-	public String readBoard(@ModelAttribute("bTitle") int idx, Model model) {
-		/*board = boardservice.readBoard(idx);
+	public String readBoard(@RequestParam(value="b_id", required=true) int idx, Model model) {
+//		int iddd = idx;
+		Board board = boardservice.readBoard(idx);
 		boardservice.increaseViews(board); //조회수 올리기
-		model.addAttribute("board", board);*/
+		model.addAttribute("board", board);
 		
 		return "/detailBoard";
 	}

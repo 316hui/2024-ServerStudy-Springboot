@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.BoardMapper">
+	<resultMap id="BoardMap" type="Board">
+		<id property="bId" column="b_id" />
+		<result property="bTitle" column="b_title"/>
+		<result property="bContent" column="b_content"/>
+		<result property= "bWriter" column="b_writer"/>
+		<result property= "bDateTime" column="b_date"/>
+		<result property= "bViews" column= "b_biews"/>
+	</resultMap>
+
     <select id="selectBoardList" resultType="Board">
         SELECT         b_id as bId,
         b_title as bTitle,
@@ -23,12 +32,12 @@
     		#{bWriter}
     </insert>
     
-    <select id="readBoard" resultType="Board">
+    <select id="readBoard" resultMap="BoardMap" parameterType="int">
 			SELECT 		*
 			FROM 		lc_board	ta
 			LEFT JOIN   lc_user		tb
 			ON			ta.b_id = tb.u_id
-			WEHRE		b_id = #{bId}  		
+			WHERE		b_id = #{bId}  		
     </select>
     
     <insert id="updateBoard" parameterType="Board">
@@ -46,9 +55,27 @@
     	WHERE		b_id = #{bId}
     </delete>
     
-    <select id="getAllBoards" resultType="Board">
-    	SELECT		*
-    	FROM		lc_board
+    <select id="getAllBoards" resultMap="BoardMap" parameterType="Pagination">
+   		SELECT		@ROWNUM := @ROWNUM -1 AS ROWNUM,	ta.*
+   		FROM		lc_board  ta
+   		INNER JOIN 	(SELECT @ROWNUM := (SELECT COUNT(*)-#{pageNum}+1  FROM 	lc_board ta)) tb ON 1=1
+   		
+    	<where>
+    		<if test="search.category != null and !search.category.isEmpty()">
+    			<if test = "search.keyword != null and !search.keyword.isEmpty()">
+    				<if test= "search.category == 1">
+    					AND b_title LIKE CONCAT('%', #{search.keyword}, '%')	
+    				</if>
+    				<if test = "search.category == 2">
+    					AND b_content LIKE CONCAT('%', #{search.keyword}, '%')
+    				</if>
+    			</if>
+    		</if>
+    	</where>
+    	
+    	LIMIT		#{pageNum}, #{perPage}
+    	
+    		
     	
     </select>
     

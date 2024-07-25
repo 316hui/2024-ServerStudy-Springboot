@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,10 +83,10 @@
       
 			<c:forEach items="${boards}" var="board" varStatus="status">
 				<tr>
-					<td><a href="/readBoard?b_idx=${board.b_idx}">${board.rownum}</a></td>
-					<td>${board.b_title}</td>
-					<td>${board.b_content}</td>
-					<td>${board.b_views}</td>
+					<td><a href="/readBoard?b_id=${board.bId}">${board.rownum}</a></td>
+					<td>${board.bTitle}</td>
+					<td>${board.bContent}</td>
+					<td>${board.bViews}</td>
 				</tr>
 				
 			</c:forEach>

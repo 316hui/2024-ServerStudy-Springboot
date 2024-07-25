@@ -7,6 +7,7 @@ public class Board {
 	private String bWriter;
 	private String bDateTime;
 	private int bViews;
+	private int rownum;
 	
 	private User user;
 	
@@ -51,6 +52,12 @@ public class Board {
 	}
 	public void setUser(User user) {
 		this.user = user;
+	}
+	public int getRownum() {
+		return rownum;
+	}
+	public void setRownum(int rownum) {
+		this.rownum = rownum;
 	}
 	
 	

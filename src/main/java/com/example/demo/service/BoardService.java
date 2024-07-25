@@ -13,9 +13,10 @@ public interface BoardService {
 	public Board readBoard(int idx);
 	public void updateBoard(Board board);
 	public void deleteBoard(int idx);
-	public List<Board> getAllBoards();
+	public List<Board> getAllBoards(Pagination paginaton);
 	public void increaseViews(Board board);
 	
-	public int getboardsCount(Pagination pagination);
 	public List<User> getUsers(Pagination pagination);
+	public int getboardsCount(Pagination pagination);
+	
 	}

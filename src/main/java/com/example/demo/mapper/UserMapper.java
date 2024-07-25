@@ -20,6 +20,6 @@ public interface UserMapper {
 	public void createAuthority(User user);
 	
 	
-	public int getUsersCount(Pagination pagination);
-	public List<User> getUsers(Pagination pagination);
+	//public int getUsersCount(Pagination pagination);
+	//public List<User> getUsers(Pagination pagination);
 }

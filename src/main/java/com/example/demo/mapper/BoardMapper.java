@@ -16,7 +16,7 @@ public interface BoardMapper {
 	public Board readBoard(int idx);
 	public void deleteBoard(int idx);
 	public void updateBoard(Board board);
-	public List<Board> getAllBoards();
+	public List<Board> getAllBoards(Pagination pagination);
 	public void increaseViews(Board board);
 
 	public int getboardsCount(Pagination pagination);
