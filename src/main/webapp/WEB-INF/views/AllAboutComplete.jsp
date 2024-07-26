@@ -44,7 +44,7 @@
 		게시물이 성공적으로 수정되었습니다.
 	</div>
 	<div class="back-button">
-        <a href="board-list.do">
+        <a href="/boardList">
             <button>돌아가기</button>
         </a>
     </div>

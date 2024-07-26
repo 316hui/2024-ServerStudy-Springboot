@@ -1,0 +1,891 @@
+10:12:13.284 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 16820 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:12:13.284 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 16820 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:12:13.285 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:12:13.285 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:12:13.293 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:12:13.293 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:12:14.823 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.903 seconds (process running for 2.417) 
+10:12:14.823 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.903 seconds (process running for 2.417) 
+10:12:29.011 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : check page 1 
+10:12:29.011 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : check page 1 
+10:12:29.119 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+10:12:29.133 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+10:12:29.145 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+10:12:29.146 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+10:12:29.146 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+10:12:29.152 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+10:12:29.153 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+10:12:29.155 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_writer, b_datetime, b_views 
+10:12:29.156 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 1 
+10:12:29.157 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 0 
+10:12:29.157 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 0 
+10:12:29.157 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+10:12:35.471 DEBUG --- [http-nio-8080-exec-3] c.e.demo.controller.Controller : check page 1 
+10:12:35.471 DEBUG --- [http-nio-8080-exec-3] c.e.demo.controller.Controller : check page 1 
+10:12:35.476 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board WHERE b_title LIKE CONCAT('%', ?, '%') 
+10:12:35.477 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters: a(String) 
+10:12:35.477 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+10:12:35.477 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 0 
+10:12:35.477 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+10:12:35.478 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 WHERE b_title LIKE CONCAT('%', ?, '%') LIMIT ?, ? 
+10:12:35.478 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), a(String), 0(Integer), 3(Integer) 
+10:12:35.479 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 0 
+10:12:40.508 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : check page 1 
+10:12:40.508 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : check page 1 
+10:12:40.509 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+10:12:40.509 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+10:12:40.510 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+10:12:40.510 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+10:12:40.510 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+10:12:40.511 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+10:12:40.511 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+10:12:40.512 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_writer, b_datetime, b_views 
+10:12:40.512 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 1 
+10:12:40.512 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 0 
+10:12:40.512 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 0 
+10:12:40.512 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+10:12:42.331 DEBUG --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:12:42.332 DEBUG --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 3(Integer) 
+10:12:42.332 TRACE --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:12:42.333 TRACE --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 0, null, null, null, null, null, null, null, null 
+10:12:42.333 DEBUG --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:12:42.334 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:12:42.335 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 3(Integer) 
+10:12:42.336 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:12:44.874 DEBUG --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : check page 1 
+10:12:44.874 DEBUG --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : check page 1 
+10:12:44.874 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+10:12:44.875 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+10:12:44.875 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+10:12:44.875 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+10:12:44.875 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+10:12:44.876 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+10:12:44.876 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+10:12:44.877 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_writer, b_datetime, b_views 
+10:12:44.877 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 1 
+10:12:44.877 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 0 
+10:12:44.878 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 1 
+10:12:44.878 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+10:12:46.554 DEBUG --- [http-nio-8080-exec-7] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:12:46.554 DEBUG --- [http-nio-8080-exec-7] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 2(Integer) 
+10:12:46.555 TRACE --- [http-nio-8080-exec-7] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:12:46.555 TRACE --- [http-nio-8080-exec-7] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 0, null, null, null, null, null, null, null, null 
+10:12:46.555 DEBUG --- [http-nio-8080-exec-7] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:12:46.556 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:12:46.556 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 2(Integer) 
+10:12:46.558 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:12:52.612 WARN  --- [http-nio-8080-exec-8] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'bId' for method parameter type int is not present] 
+10:12:54.211 DEBUG --- [http-nio-8080-exec-9] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:12:54.211 DEBUG --- [http-nio-8080-exec-9] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 2(Integer) 
+10:12:54.212 TRACE --- [http-nio-8080-exec-9] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:12:54.213 TRACE --- [http-nio-8080-exec-9] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 1, null, null, null, null, null, null, null, null 
+10:12:54.213 DEBUG --- [http-nio-8080-exec-9] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:12:54.213 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:12:54.213 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 2(Integer) 
+10:12:54.222 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:12:55.018 WARN  --- [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'bId' for method parameter type int is not present] 
+10:12:56.250 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:12:56.251 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 2(Integer) 
+10:12:56.251 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:12:56.251 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 2, null, null, null, null, null, null, null, null 
+10:12:56.251 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:12:56.252 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:12:56.252 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 2(Integer) 
+10:12:56.253 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:20:30.848 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 1260 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:20:30.848 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 1260 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:20:30.849 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:20:30.849 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:20:30.849 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:20:30.849 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:20:32.756 WARN  --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : Unable to start LiveReload server 
+10:20:32.785 WARN  --- [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop' 
+10:20:32.818 ERROR --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+ 
+10:20:35.638 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 9412 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:20:35.638 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 9412 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:20:35.640 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:20:35.640 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:20:35.640 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:20:35.640 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:20:37.483 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.303 seconds (process running for 3.059) 
+10:20:37.483 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.303 seconds (process running for 3.059) 
+10:20:54.063 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:20:54.081 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 2(Integer) 
+10:20:54.095 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:20:54.095 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 3, null, null, null, null, null, null, null, null 
+10:20:54.097 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:20:54.103 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:20:54.103 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 2(Integer) 
+10:20:54.112 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:21:05.097 WARN  --- [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'bId' for method parameter type int is not present] 
+10:21:29.837 DEBUG --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:21:29.838 DEBUG --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 2(Integer) 
+10:21:29.839 TRACE --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:21:29.839 TRACE --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 4, null, null, null, null, null, null, null, null 
+10:21:29.839 DEBUG --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:21:37.549 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:21:37.550 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 2(Integer) 
+10:21:37.551 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:21:46.485 DEBUG --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : check page 1 
+10:21:46.485 DEBUG --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : check page 1 
+10:21:46.511 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+10:21:46.512 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+10:21:46.512 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+10:21:46.512 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+10:21:46.512 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+10:21:46.513 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+10:21:46.513 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+10:21:46.514 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_writer, b_datetime, b_views 
+10:21:46.514 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 1 
+10:21:46.515 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 5 
+10:21:46.515 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 1 
+10:21:46.515 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+10:21:53.013 DEBUG --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:21:53.014 DEBUG --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+10:21:53.014 TRACE --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:21:53.014 TRACE --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+10:21:53.015 DEBUG --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:21:54.413 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:21:54.414 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+10:21:54.423 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:23:39.980 WARN  --- [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'bId' for method parameter type int is not present] 
+10:33:00.276 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 9412 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:33:00.276 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 9412 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:33:00.277 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:33:00.277 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:33:00.277 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:33:00.277 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:33:00.776 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.529 seconds (process running for 746.351) 
+10:33:00.776 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.529 seconds (process running for 746.351) 
+10:33:06.352 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 9412 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:33:06.352 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 9412 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:33:06.352 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:33:06.352 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:33:06.353 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:33:06.353 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:33:07.606 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.28 seconds (process running for 753.181) 
+10:33:07.606 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.28 seconds (process running for 753.181) 
+10:33:26.549 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 4912 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:33:26.549 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 4912 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:33:26.550 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:33:26.550 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:33:26.551 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:33:26.551 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:33:28.081 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.892 seconds (process running for 2.386) 
+10:33:28.081 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.892 seconds (process running for 2.386) 
+10:33:36.171 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : check page 1 
+10:33:36.171 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : check page 1 
+10:33:36.276 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+10:33:36.296 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+10:33:36.307 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+10:33:36.308 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+10:33:36.308 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+10:33:36.314 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+10:33:36.315 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+10:33:36.317 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_writer, b_datetime, b_views 
+10:33:36.317 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 2 
+10:33:36.318 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 5 
+10:33:36.318 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 1 
+10:33:36.318 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+10:35:26.084 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 4912 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:35:26.084 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 4912 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:35:26.084 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:35:26.084 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:35:26.084 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:35:26.084 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:35:26.467 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.406 seconds (process running for 120.772) 
+10:35:26.467 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.406 seconds (process running for 120.772) 
+10:35:49.003 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : check page 1 
+10:35:49.003 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : check page 1 
+10:35:49.006 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+10:35:49.007 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+10:35:49.007 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+10:35:49.007 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+10:35:49.007 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+10:35:49.008 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+10:35:49.009 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+10:35:49.017 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_writer, b_datetime, b_views 
+10:35:49.017 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 2 
+10:35:49.018 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 5 
+10:35:49.018 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 1 
+10:35:49.018 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+10:35:53.074 DEBUG --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : check page 1 
+10:35:53.074 DEBUG --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : check page 1 
+10:35:53.075 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+10:35:53.075 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+10:35:53.075 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+10:35:53.076 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+10:35:53.076 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+10:35:53.076 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+10:35:53.077 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+10:35:53.077 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_writer, b_datetime, b_views 
+10:35:53.078 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 2 
+10:35:53.078 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 5 
+10:35:53.078 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 1 
+10:35:53.078 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+10:44:08.160 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 14792 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:44:08.160 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 14792 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:44:08.161 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:44:08.161 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:44:08.161 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:44:08.161 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:44:08.421 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 4912 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:44:08.421 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 4912 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:44:08.421 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:44:08.421 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:44:08.421 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:44:08.421 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:44:08.844 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.446 seconds (process running for 643.149) 
+10:44:08.844 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.446 seconds (process running for 643.149) 
+10:44:09.752 WARN  --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : Unable to start LiveReload server 
+10:44:09.767 WARN  --- [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop' 
+10:44:09.793 ERROR --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+ 
+10:44:17.927 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 13176 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:44:17.927 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 13176 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:44:17.928 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:44:17.928 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:44:17.928 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:44:17.928 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:44:19.460 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.902 seconds (process running for 2.394) 
+10:44:19.460 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.902 seconds (process running for 2.394) 
+10:44:26.766 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : check page 1 
+10:44:26.766 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : check page 1 
+10:44:26.869 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+10:44:26.884 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+10:44:26.896 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+10:44:26.896 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+10:44:26.897 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+10:44:26.902 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+10:44:26.903 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+10:44:26.905 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_writer, b_datetime, b_views 
+10:44:26.905 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 2 
+10:44:26.906 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 5 
+10:44:26.906 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 1 
+10:44:26.906 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+10:44:30.801 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:44:30.801 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+10:44:30.802 TRACE --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:44:30.802 TRACE --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 2, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+10:44:30.802 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:44:30.803 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:44:30.803 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+10:44:30.804 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:44:32.770 DEBUG --- [http-nio-8080-exec-3] c.e.demo.controller.Controller : check page 1 
+10:44:32.770 DEBUG --- [http-nio-8080-exec-3] c.e.demo.controller.Controller : check page 1 
+10:44:32.771 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+10:44:32.771 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+10:44:32.771 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+10:44:32.772 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+10:44:32.772 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+10:44:32.772 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+10:44:32.772 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+10:44:32.773 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_writer, b_datetime, b_views 
+10:44:32.773 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 3 
+10:44:32.773 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 5 
+10:44:32.773 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 1 
+10:44:32.773 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+10:44:35.397 DEBUG --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:44:35.397 DEBUG --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 3(Integer) 
+10:44:35.398 TRACE --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:44:35.398 TRACE --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 1, null, null, null, null, null, null, null, null 
+10:44:35.398 DEBUG --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:44:35.399 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:44:35.399 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 3(Integer) 
+10:44:35.409 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:44:37.209 WARN  --- [http-nio-8080-exec-5] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'bId' for method parameter type int is not present] 
+10:44:38.357 DEBUG --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:44:38.358 DEBUG --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 3(Integer) 
+10:44:38.358 TRACE --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:44:38.358 TRACE --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 2, null, null, null, null, null, null, null, null 
+10:44:38.358 DEBUG --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:44:38.359 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:44:38.359 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 3(Integer) 
+10:44:38.364 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:44:39.140 WARN  --- [http-nio-8080-exec-7] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'bId' for method parameter type int is not present] 
+10:44:40.134 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:44:40.135 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 3(Integer) 
+10:44:40.135 TRACE --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:44:40.135 TRACE --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 3, null, null, null, null, null, null, null, null 
+10:44:40.136 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:44:40.136 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:44:40.136 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 3(Integer) 
+10:44:40.143 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:48:59.379 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 8856 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:48:59.379 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 8856 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:48:59.380 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:48:59.380 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:48:59.381 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:48:59.381 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:49:00.914 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.923 seconds (process running for 2.435) 
+10:49:00.914 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.923 seconds (process running for 2.435) 
+10:49:06.023 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : check page 1 
+10:49:06.023 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : check page 1 
+10:49:06.128 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+10:49:06.143 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+10:49:06.154 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+10:49:06.155 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+10:49:06.155 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+10:49:06.161 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+10:49:06.163 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+10:49:06.164 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_writer, b_datetime, b_views 
+10:49:06.165 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 3 
+10:49:06.166 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 5 
+10:49:06.166 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 4 
+10:49:06.166 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+10:49:10.571 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:49:10.571 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+10:49:10.571 TRACE --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:49:10.571 TRACE --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 3, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+10:49:10.572 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:49:10.572 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:49:10.572 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+10:49:10.574 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:49:11.617 WARN  --- [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'bId' for method parameter type int is not present] 
+10:49:13.437 DEBUG --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:49:13.438 DEBUG --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+10:49:13.438 TRACE --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:49:13.439 TRACE --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 4, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+10:49:13.439 DEBUG --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:49:13.439 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:49:13.439 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+10:49:13.449 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:49:14.316 WARN  --- [http-nio-8080-exec-5] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'bId' for method parameter type int is not present] 
+10:49:22.061 DEBUG --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:49:22.062 DEBUG --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+10:49:22.062 TRACE --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:49:22.062 TRACE --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 5, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+10:49:22.063 DEBUG --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:49:22.063 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:49:22.063 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+10:49:22.072 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:49:22.594 DEBUG --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : check page 1 
+10:49:22.594 DEBUG --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : check page 1 
+10:49:22.595 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+10:49:22.595 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+10:49:22.595 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+10:49:22.595 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+10:49:22.595 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+10:49:22.596 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+10:49:22.596 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+10:49:22.596 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_writer, b_datetime, b_views 
+10:49:22.596 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 6 
+10:49:22.597 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, zz5, 2024-07-17 09:50:11, 5 
+10:49:22.597 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, yejii, 2024-07-17 09:50:27, 4 
+10:49:22.597 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+10:49:52.523 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:49:52.524 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+10:49:52.525 TRACE --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:49:52.525 TRACE --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 6, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+10:49:52.525 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:49:52.525 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:49:52.526 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+10:49:52.536 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:49:57.780 WARN  --- [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'bId' for method parameter type int is not present] 
+10:49:59.030 DEBUG --- [http-nio-8080-exec-10] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:49:59.030 DEBUG --- [http-nio-8080-exec-10] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+10:49:59.031 TRACE --- [http-nio-8080-exec-10] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:49:59.031 TRACE --- [http-nio-8080-exec-10] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 7, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+10:49:59.031 DEBUG --- [http-nio-8080-exec-10] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:49:59.031 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:49:59.032 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+10:49:59.041 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:49:59.652 WARN  --- [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'bId' for method parameter type int is not present] 
+10:50:00.693 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:50:00.693 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+10:50:00.693 TRACE --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:50:00.694 TRACE --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 8, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+10:50:00.694 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:50:00.694 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+10:50:00.694 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+10:50:00.696 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+10:52:17.166 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12848 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:52:17.166 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12848 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:52:17.167 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:52:17.167 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:52:17.167 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:52:17.167 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:52:18.954 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.227 seconds (process running for 2.971) 
+10:52:18.954 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.227 seconds (process running for 2.971) 
+10:52:33.432 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+10:52:33.641 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+10:52:33.808 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+10:52:33.809 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 9, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+10:52:33.822 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+10:54:08.534 WARN  --- [Thread-5] o.a.tomcat.util.net.NioEndpoint : The executor associated with thread pool [http-nio-8080] has not fully shutdown. Some application threads may still be running. 
+10:54:10.898 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12848 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:54:10.898 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12848 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+10:54:10.898 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:54:10.898 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+10:54:10.898 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:54:10.898 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+10:54:11.364 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.492 seconds (process running for 115.38) 
+10:54:11.364 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.492 seconds (process running for 115.38) 
+11:03:56.209 WARN  --- [Thread-7] o.a.tomcat.util.net.NioEndpoint : The executor associated with thread pool [http-nio-8080] has not fully shutdown. Some application threads may still be running. 
+11:03:58.615 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12848 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:03:58.615 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12848 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:03:58.615 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:03:58.615 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:03:58.615 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:03:58.615 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:03:59.897 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.315 seconds (process running for 703.913) 
+11:03:59.897 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.315 seconds (process running for 703.913) 
+11:04:17.721 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12848 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:04:17.721 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12848 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:04:17.721 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:04:17.721 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:04:17.721 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:04:17.721 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:04:18.134 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.435 seconds (process running for 722.15) 
+11:04:18.134 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.435 seconds (process running for 722.15) 
+11:06:24.807 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12880 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:06:24.807 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12880 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:06:24.808 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:06:24.808 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:06:24.809 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:06:24.809 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:06:26.670 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.308 seconds (process running for 3.061) 
+11:06:26.670 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.308 seconds (process running for 3.061) 
+11:06:39.520 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+11:06:39.737 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+11:06:39.899 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_writer, b_datetime, b_views, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:06:39.900 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, asdfasfd, 2024-07-17 09:49:49, 9, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:06:39.915 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:07:11.850 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+11:07:11.858 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+11:07:11.871 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+11:13:26.205 WARN  --- [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'bId' for method parameter type int is not present] 
+11:13:44.171 WARN  --- [http-nio-8080-exec-5] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'bId' for method parameter type int is not present] 
+11:14:44.522 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12880 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:14:44.522 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12880 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:14:44.522 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:14:44.522 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:14:44.523 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:14:44.523 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:14:45.471 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.979 seconds (process running for 501.862) 
+11:14:45.471 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.979 seconds (process running for 501.862) 
+11:16:00.447 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12880 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:16:00.447 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12880 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:16:00.447 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:16:00.447 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:16:00.447 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:16:00.447 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:16:01.148 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.727 seconds (process running for 577.539) 
+11:16:01.148 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.727 seconds (process running for 577.539) 
+11:16:01.178 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+11:16:01.178 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+11:16:01.179 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:16:01.179 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, 2024-07-17 09:49:49, 10, 22, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:16:01.179 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:16:01.180 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+11:16:01.180 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+11:16:01.189 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+11:16:06.208 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+11:16:06.208 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+11:16:06.209 TRACE --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:16:06.209 TRACE --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, 2024-07-17 09:49:49, 11, 22, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:16:06.209 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:16:17.447 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.updateBoard : ==>  Preparing: UPDATE lc_board SET b_title = ?, b_content = ? WHERE 1=1 AND b_id = ? 
+11:16:17.449 ERROR --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.mybatis.spring.MyBatisSystemException] with root cause 
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'bContnet' in 'class com.example.demo.domain.Board'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:385)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:160)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:153)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:82)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:97)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:65)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:91)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy67.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy6/jdk.proxy6.$Proxy83.updateBoard(Unknown Source)
+	at com.example.demo.service.BoardServiceImpl.updateBoard(BoardServiceImpl.java:36)
+	at com.example.demo.controller.Controller.completeEditBoard(Controller.java:155)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:653)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:145)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+11:25:54.976 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 9192 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:25:54.976 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 9192 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:25:54.977 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:25:54.977 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:25:54.977 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:25:54.977 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:25:56.755 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.219 seconds (process running for 2.989) 
+11:25:56.755 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.219 seconds (process running for 2.989) 
+11:26:07.914 DEBUG --- [http-nio-8080-exec-3] c.e.demo.controller.Controller : check page 1 
+11:26:07.914 DEBUG --- [http-nio-8080-exec-3] c.e.demo.controller.Controller : check page 1 
+11:26:08.042 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+11:26:08.058 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+11:26:08.071 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+11:26:08.071 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+11:26:08.072 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+11:26:08.078 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+11:26:08.079 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+11:26:08.081 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id 
+11:26:08.082 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, 2024-07-17 09:49:49, 11, 22 
+11:26:08.082 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, 2024-07-17 09:50:11, 5, 22 
+11:26:08.083 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, 2024-07-17 09:50:27, 4, 22 
+11:26:08.083 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+11:30:49.954 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 18348 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:30:49.954 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 18348 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:30:49.955 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:30:49.955 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:30:49.955 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:30:49.955 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:30:51.786 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.301 seconds (process running for 3.04) 
+11:30:51.786 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.301 seconds (process running for 3.04) 
+11:30:58.531 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : check page 1 
+11:30:58.531 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : check page 1 
+11:30:58.657 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+11:30:58.673 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+11:30:58.686 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+11:30:58.686 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+11:30:58.687 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+11:30:58.693 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+11:30:58.695 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+11:30:58.696 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id 
+11:30:58.696 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, 2024-07-17 09:49:49, 11, 22 
+11:30:58.697 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, 2024-07-17 09:50:11, 5, 22 
+11:30:58.697 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, 2024-07-17 09:50:27, 4, 22 
+11:30:58.697 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+11:31:14.975 DEBUG --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+11:31:14.975 DEBUG --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+11:31:14.975 TRACE --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:31:14.975 TRACE --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, 2024-07-17 09:49:49, 11, 22, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:31:14.976 DEBUG --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:31:14.977 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+11:31:14.977 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+11:31:14.986 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+11:31:17.205 DEBUG --- [http-nio-8080-exec-5] c.e.demo.controller.Controller : check page 1 
+11:31:17.205 DEBUG --- [http-nio-8080-exec-5] c.e.demo.controller.Controller : check page 1 
+11:31:17.206 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+11:31:17.206 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+11:31:17.207 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+11:31:17.207 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 6 
+11:31:17.207 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+11:31:17.207 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LIMIT ?, ? 
+11:31:17.207 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+11:31:17.208 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id 
+11:31:17.208 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 1, www글, ww목, 2024-07-17 09:49:49, 12, 22 
+11:31:17.209 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 5, 2, 222w, 2222, 2024-07-17 09:50:11, 5, 22 
+11:31:17.209 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 4, 3, 33s, 3s3s, 2024-07-17 09:50:27, 4, 22 
+11:31:17.209 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+11:32:54.567 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+11:32:54.567 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+11:32:54.567 TRACE --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:32:54.567 TRACE --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, 2024-07-17 09:49:49, 12, 22, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:32:54.569 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:32:54.569 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+11:32:54.569 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+11:32:54.570 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+11:32:59.992 DEBUG --- [http-nio-8080-exec-9] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+11:32:59.993 DEBUG --- [http-nio-8080-exec-9] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+11:32:59.993 TRACE --- [http-nio-8080-exec-9] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:32:59.994 TRACE --- [http-nio-8080-exec-9] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, 2024-07-17 09:49:49, 13, 22, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:32:59.994 DEBUG --- [http-nio-8080-exec-9] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:33:09.644 DEBUG --- [http-nio-8080-exec-10] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+11:33:09.644 DEBUG --- [http-nio-8080-exec-10] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+11:33:09.645 TRACE --- [http-nio-8080-exec-10] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:33:09.645 TRACE --- [http-nio-8080-exec-10] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, 2024-07-17 09:49:49, 13, 22, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:33:09.645 DEBUG --- [http-nio-8080-exec-10] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:33:09.645 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+11:33:09.645 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+11:33:09.655 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+11:33:13.808 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+11:33:13.809 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+11:33:13.809 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:33:13.809 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, 2024-07-17 09:49:49, 14, 22, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:33:13.810 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:33:46.113 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.updateBoard : ==>  Preparing: UPDATE lc_board SET b_title = ?, b_content = ? WHERE 1=1 AND b_id = ? 
+11:33:46.117 ERROR --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.mybatis.spring.MyBatisSystemException] with root cause 
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'bContnet' in 'class com.example.demo.domain.Board'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:385)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:160)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:153)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:82)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:97)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:65)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:91)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy67.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy69.updateBoard(Unknown Source)
+	at com.example.demo.service.BoardServiceImpl.updateBoard(BoardServiceImpl.java:36)
+	at com.example.demo.controller.Controller.completeEditBoard(Controller.java:155)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:653)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:145)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+11:36:30.570 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 18348 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:36:30.570 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 18348 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:36:30.571 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:36:30.571 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:36:30.571 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:36:30.571 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:36:31.040 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.498 seconds (process running for 342.294) 
+11:36:31.040 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.498 seconds (process running for 342.294) 
+11:36:34.802 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+11:36:34.802 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+11:36:34.803 TRACE --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:36:34.803 TRACE --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, 2024-07-17 09:49:49, 14, 22, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:36:34.803 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:36:34.804 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+11:36:34.804 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 1(Integer) 
+11:36:34.813 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+11:36:39.033 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+11:36:39.033 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+11:36:39.033 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:36:39.033 TRACE --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, 2024-07-17 09:49:49, 15, 22, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:36:39.034 DEBUG --- [http-nio-8080-exec-1] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:36:41.393 DEBUG --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.b_id = tb.u_id WHERE b_id = ? 
+11:36:41.394 DEBUG --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 1(Integer) 
+11:36:41.394 TRACE --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:36:41.394 TRACE --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 1, www글, ww목, 2024-07-17 09:49:49, 15, 22, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:36:41.395 DEBUG --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:36:47.969 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.updateBoard : ==>  Preparing: UPDATE lc_board SET b_title = ?, b_content = ? WHERE 1=1 AND b_id = ? 
+11:36:47.969 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.updateBoard : ==> Parameters: null, null, 0(Integer) 
+11:36:47.969 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.updateBoard : <==    Updates: 0 

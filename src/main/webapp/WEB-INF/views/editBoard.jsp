@@ -62,7 +62,7 @@
 <body>
 	<div class="form-container">
 		<h2>게시물 수정</h2>
-		<form action="board-after-edit.do" method="POST">
+		<form action="/complete-updateBoard" method="POST">
 			<div class="form-group">
 				<label for="title">제목</label>
 				<input type="text" id="b_title" name="b_title" value="${board.bTitle}" required>

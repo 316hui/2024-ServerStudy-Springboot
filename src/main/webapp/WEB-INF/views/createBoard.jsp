@@ -61,7 +61,7 @@
 <body>
 	<div class="form-container">
 		<h2>게시물 등록</h2>
-		<form action="/createBoard" method="POST">
+		<form action="/completeCreateBoard method="POST">
 			<div class="form-group">
 				<div class="form-group">
 	                <label for="title">제목</label>

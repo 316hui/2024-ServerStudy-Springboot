@@ -6,8 +6,16 @@
 		<result property="bTitle" column="b_title"/>
 		<result property="bContent" column="b_content"/>
 		<result property= "bWriter" column="b_writer"/>
-		<result property= "bDateTime" column="b_date"/>
+		<result property= "bDateTime" column="b_datetime"/>
 		<result property= "bViews" column= "b_biews"/>
+		<association property="user" resultMap="UserMap" />
+	</resultMap>
+	
+	<resultMap type="User" id="UserMap">
+		<id property="username" column="u_id" />
+		<result property="password" column="u_password"/>
+		<result property="uName" column="u_name"/>
+		<result property="uDateTime" column="u_datetime"/>
 	</resultMap>
 
     <select id="selectBoardList" resultType="Board">
@@ -43,7 +51,7 @@
     <insert id="updateBoard" parameterType="Board">
     	UPDATE		lc_board
     	SET			b_title = #{bTitle},
-    				b_content = #{bContnet}
+    				b_content = #{bContent}
     				
     	WHERE 		1=1
     	AND			b_id = #{bId}

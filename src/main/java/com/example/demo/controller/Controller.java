@@ -123,10 +123,14 @@ public class Controller {
 	}
 	
 	@RequestMapping("/createBoard")
-	public String createBoard(Board board) {
-		boardservice.createBoard(board);
-		
+	public String createBoard() {
 		return "/createBoard";
+	}
+	
+	@RequestMapping("/completeCreateBoard")
+	public String completeCreateBoard(Board board) {
+		boardservice.createBoard(board);
+		return "/AllAboutComplete";
 	}
 
 	@RequestMapping("/readBoard")
@@ -140,28 +144,26 @@ public class Controller {
 	}
 	
 	@RequestMapping("/updateBoard")
-	public String editBoard(@RequestParam("bId") int idx, Model model) {
+	public String editBoard(@RequestParam("b_id") int idx, Model model) {
 		Board board = boardservice.readBoard(idx);
 		model.addAttribute("board", board);
 		
 		return "/editBoard";
 	}
 	@RequestMapping("/complete-updateBoard")
-	public String completeEditBoard() {
+	public String completeEditBoard(Board board) {
+		boardservice.updateBoard(board);
+		
 		return "/AllAboutComplete";
 	}
 	
 	@RequestMapping("/deleteBoard")
-	public String updateBoard(@RequestParam("bId") int idx) {
+	public String updateBoard(@RequestParam("b_id") int idx) {
 		boardservice.deleteBoard(idx);
-		
-		return "/deleteBoard.jsp";
-	}
-	@RequestMapping("/complete-deleteBoard")
-	public String CompleteDeleteBoard() {
 		
 		return "/AllAboutComplete";
 	}
+	
 
 }
 	
