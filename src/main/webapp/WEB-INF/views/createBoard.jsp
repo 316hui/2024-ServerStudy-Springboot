@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,13 +61,22 @@
 </style>
 </head>
 <body>
+	<sec:authorize access="isAuthenticated()">
+		<sec:authentication property="principal" var="user"/>
+	</sec:authorize>
+	<p>${user }</p>
 	<div class="form-container">
 		<h2>게시물 등록</h2>
-		<form action="/completeCreateBoard method="POST">
+		<form action="/board/completeCreateBoard" method="POST">
+			<input type="hidden" name="user.username" value="${user.username }">
 			<div class="form-group">
 				<div class="form-group">
 	                <label for="title">제목</label>
 	                <input type="text" id="b_title" name="bTitle" required>
+	            </div>
+	            <div class="form-group">
+	                <label for="writer">작성자</label>
+	                ${user.uName}
 	            </div>
             </div>
             <div class="form-group">

@@ -37,14 +37,14 @@ public class Controller {
 	
 	@RequestMapping("/")
 	public String home(Model model) {
-		
-		List<Board> list = boardservice.selectBoardList();
-		model.addAttribute("list", list);
+		//List<Board> list = boardservice.getAllBoards(pagination);
+		//model.addAttribute("list", list);
 		logger.debug("debug");
 	    logger.info("info");
 	    logger.error("error");
 	     
-		return "/index";
+	    return "redirect:/boardList";
+		//return "/index";
 
 	}
 	
@@ -122,20 +122,20 @@ public class Controller {
 		return "/boardList";
 	}
 	
-	@RequestMapping("/createBoard")
+	@RequestMapping("/board/createBoard")
 	public String createBoard() {
 		return "/createBoard";
 	}
 	
-	@RequestMapping("/completeCreateBoard")
+	@RequestMapping("/board/completeCreateBoard")
 	public String completeCreateBoard(Board board) {
-		boardservice.createBoard(board);
+		 boardservice.createBoard(board);
+		
 		return "/AllAboutComplete";
 	}
 
-	@RequestMapping("/readBoard")
+	@RequestMapping("/board/readBoard")
 	public String readBoard(@RequestParam(value="b_id", required=true) int idx, Model model) {
-//		int iddd = idx;
 		Board board = boardservice.readBoard(idx);
 		boardservice.increaseViews(board); //조회수 올리기
 		model.addAttribute("board", board);

@@ -50,7 +50,7 @@
 </head>
 <body>
     <div class="add-button">
-        <a href="/createBoard">
+        <a href="/board/createBoard">
             <button>게시물 등록</button>
         </a>
     </div>
@@ -83,7 +83,7 @@
       
 			<c:forEach items="${boards}" var="board" varStatus="status">
 				<tr>
-					<td><a href="/readBoard?b_id=${board.bId}">${board.rownum}</a></td>
+					<td><a href="/board/readBoard?b_id=${board.bId}">${board.rownum}</a></td>
 					<td>${board.bTitle}</td>
 					<td>${board.bContent}</td>
 					<td>${board.bViews}</td>
@@ -114,7 +114,7 @@
 						</c:when>
 						<c:when test="${ pagination.page ne i }">
 							<li>
-								<a href="board-list.do?page=${i}&category=${pagination.search.category}&keyword=${pagination.search.keyword}">${i}</a>
+								<a href="/boardList?page=${i}&category=${pagination.search.category}&keyword=${pagination.search.keyword}">${i}</a>
 							</li>
 						</c:when>
 					</c:choose>

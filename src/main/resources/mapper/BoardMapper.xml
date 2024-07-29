@@ -7,7 +7,8 @@
 		<result property="bContent" column="b_content"/>
 		<result property= "bWriter" column="b_writer"/>
 		<result property= "bDateTime" column="b_datetime"/>
-		<result property= "bViews" column= "b_biews"/>
+		<result property= "bViews" column= "b_views"/>
+		<result property= "rownum" column= "ROWNUM"/>
 		<association property="user" resultMap="UserMap" />
 	</resultMap>
 	
@@ -28,23 +29,21 @@
     
     <insert id="createBoard" parameterType="Board">
     	INSERT		INTO	lc_board(
-			b_id, 
+    		u_id,
 			b_title,
-			b_content, 
-			b_writer
-			
+			b_content
     	)VALUES(
-    		#{bId},
-    		#{bTItle},
-    		#{bContent},
-    		#{bWriter}
+    		#{user.username},
+    		#{bTitle},
+    		#{bContent}
+    	)
     </insert>
     
     <select id="readBoard" resultMap="BoardMap" parameterType="int">
 			SELECT 		*
 			FROM 		lc_board	ta
 			LEFT JOIN   lc_user		tb
-			ON			ta.b_id = tb.u_id
+			ON			ta.u_id = tb.u_id
 			WHERE		b_id = #{bId}  		
     </select>
     
@@ -64,9 +63,12 @@
     </delete>
     
     <select id="getAllBoards" resultMap="BoardMap" parameterType="Pagination">
-   		SELECT		@ROWNUM := @ROWNUM -1 AS ROWNUM,	ta.*
+   		SELECT		@ROWNUM := @ROWNUM -1 AS ROWNUM,	
+   					ta.*,
+   					tc.*
    		FROM		lc_board  ta
    		INNER JOIN 	(SELECT @ROWNUM := (SELECT COUNT(*)-#{pageNum}+1  FROM 	lc_board ta)) tb ON 1=1
+   		LEFT JOIN	lc_user tc ON ta.u_id = tc.u_id
    		
     	<where>
     		<if test="search.category != null and !search.category.isEmpty()">
@@ -82,9 +84,6 @@
     	</where>
     	
     	LIMIT		#{pageNum}, #{perPage}
-    	
-    		
-    	
     </select>
     
     <update id="increaseViews" parameterType="Board">

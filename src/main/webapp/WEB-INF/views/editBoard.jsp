@@ -65,15 +65,19 @@
 		<form action="/complete-updateBoard" method="POST">
 			<div class="form-group">
 				<label for="title">제목</label>
-				<input type="text" id="b_title" name="b_title" value="${board.bTitle}" required>
+				<input type="text" id="b_title" name="bTitle" value="${board.bTitle}" required>
 			</div>
 			<div class="form-group">
 				<label for="content">내용</label>
-				<input type="text" id="b_content" name="b_content" value="${board.bContent}" required>
+				<input type="text" id="b_content" name="bContent" value="${board.bContent}" required>
 			</div>
 			
-			<input type="hidden" id="b_idx" name="b_idx" value="${board.bId}">
-	
+			<input type="hidden" id="b_idx" name="bId" value="${board.bId}">
+			<input type="hidden" id="b_views" name="bViews" value="${board.bViews}">
+			<input type="hidden" id="b_datetime" name="bDateTime" value="${board.bDateTime}">
+			<input type="hidden" id="b_writer" name="bWriter" value="${board.bWriter}">
+			
+			
 			<div class="form-group">
 				<button type="submit">수정 완료</button>
 			</div>
