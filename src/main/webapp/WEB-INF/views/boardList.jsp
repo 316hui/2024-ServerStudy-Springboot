@@ -1,6 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+ <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+ <%
+ 	String buttonText;
+ 	String buttonAction;
+ 	
+ 	if(session.getAttribute("isLoggedIn") != null && (Boolean)session.getAttribute("isLoggedIn")){
+ 		buttonText = "Logout";
+ 		buttonAction = "logout";
+ 	}else {
+ 		buttonText = "Login";
+ 		buttonAction = "login";
+ 	}
+ %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,11 +67,29 @@
             <button>게시물 등록</button>
         </a>
     </div>
-    <div class="login-button">
-        <a href="/beforeSignup">
+    <form action="<%= buttonAction %>" method="post">
+    	<button type="submit"><%= buttonText %></button>
+    </form>
+    <!-- <div class="login-button">
+        <a href="/login">
             <button>로그인</button>
         </a>
-    </div>
+         <a href="/logout">
+            <button>로그아웃</button>
+        </a>
+    </div> -->
+    <div class="login-button">
+	    <sec:authorize access="!isAuthenticated()">
+	        <a href="/login">
+	            <button>로그인</button>
+	        </a>
+		</sec:authorize>
+		<sec:authorize access="isAuthenticated()">
+			<a href="/logout">
+	            <button>로그아웃</button>
+	        </a>
+		</sec:authorize>
+	</div>
     <div class="search-section">
         <h2>검색</h2>
         <form action="/boardList" method="get">
@@ -88,7 +119,6 @@
 					<td>${board.bContent}</td>
 					<td>${board.bViews}</td>
 				</tr>
-				
 			</c:forEach>
 		
 	</table>	

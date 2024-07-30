@@ -43,15 +43,15 @@ public class Controller {
 	    logger.info("info");
 	    logger.error("error");
 	     
-	    return "redirect:/boardList";
+	    return "redirect:/boardList"; // "/" 가 디폴트 주소인데 "/boardList"로 리다이렉트 함.
 		//return "/index";
 
 	}
 	
 	@RequestMapping("/beforeSignup")
 	public String beforeSignUp() {
-		return "/signup";	// 수정
-	}
+		return "/signup";	//회원가입 페이지
+	} 
 	
 	@RequestMapping("/signup")
 	public String signup(User user) {
@@ -97,6 +97,10 @@ public class Controller {
 	public String denied(Model model) {
 		return "/denied";
 	}
+	@RequestMapping(value="/logout")
+	public String logout(Model model) {
+		return "/logout";
+	}
 	
 	
 	
@@ -119,6 +123,7 @@ public class Controller {
 		
 		List<Board> boards = boardservice.getAllBoards(pagination);
 		model.addAttribute("boards", boards);
+		model.addAttribute("pagination", pagination);
 		return "/boardList";
 	}
 	
