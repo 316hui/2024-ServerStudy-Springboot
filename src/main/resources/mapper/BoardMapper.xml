@@ -63,12 +63,16 @@
     </delete>
     
     <select id="getAllBoards" resultMap="BoardMap" parameterType="Pagination">
-   		SELECT		@ROWNUM := @ROWNUM -1 AS ROWNUM,	
-   					ta.*,
-   					tc.*
-   		FROM		lc_board  ta
-   		INNER JOIN 	(SELECT @ROWNUM := (SELECT COUNT(*)-#{pageNum}+1  FROM 	lc_board ta)) tb ON 1=1
-   		LEFT JOIN	lc_user tc ON ta.u_id = tc.u_id
+   		SELECT		
+   			@ROWNUM := @ROWNUM -1 AS ROWNUM,	
+  			ta.*,
+   			tc.*
+   		FROM		
+   			lc_board  ta
+   		INNER JOIN 	
+   			(SELECT @ROWNUM := (SELECT COUNT(*)-#{pageNum}+1  FROM 	lc_board ta)) tb ON 1=1
+   		LEFT JOIN	
+   			lc_user tc ON ta.u_id = tc.u_id
    		
     	<where>
     		<if test="search.category != null and !search.category.isEmpty()">

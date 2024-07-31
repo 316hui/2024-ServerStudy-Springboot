@@ -65,6 +65,46 @@
         .back-button button:hover {
             background-color: #0056b3;
         }
+        .comment-section {
+        margin-top: 40px;
+    	}
+	    .comment-form {
+	        margin-bottom: 20px;
+	    }
+	    .comment-form textarea {
+	        width: 100%;
+	        height: 100px;
+	        padding: 10px;
+	        border: 1px solid #ddd;
+	        border-radius: 4px;
+	    }
+	    .comment-form button {
+	        padding: 10px 20px;
+	        background-color: #28a745;
+	        color: white;
+	        border: none;
+	        border-radius: 4px;
+	        cursor: pointer;
+	        transition: background-color 0.3s;
+	    }
+	    .comment-form button:hover {
+	        background-color: #218838;
+	    }
+	    .comment-list {
+	        list-style-type: none;
+	        padding: 0;
+	    }
+	    .comment-list li {
+	        border-bottom: 1px solid #ddd;
+	        padding: 10px 0;
+	    }
+	    .comment-list .comment-author {
+	        font-weight: bold;
+	    }
+	    .comment-list .comment-date {
+	        color: #999;
+	        font-size: 0.9em;
+	    }
     </style>
 </head>
 <body>
@@ -105,6 +145,28 @@
         <a href="board-list.do">
             <button>돌아가기</button>
         </a>
+    </div>
+    
+    <div class="comment-section">
+    	<h2>댓글</h2>
+    
+    	<div class="comment-form">
+    		<form action="/board/readBoard" method="post">
+    			<input type="hidden" name="cId" value="${comment.cId}">
+    			<textarea name="cContent" placeholder="댓글을 입력하세요"></textarea>
+    			<button type="submit">댓글 작성</button>
+    		</form>
+    	</div>
+    	
+    	<ul class="comment-list">
+    		<c:forEach var="comment" items="${comments}">
+    			<li>
+    				<div class="comment-author">${comment.user.uName }</div>
+    				<div class="comment-date">${comment.cDateTime }</div>
+    				<div class="comment-content">${comment.cContent }</div>
+    			</li>
+    		</c:forEach>
+    	</ul>
     </div>
 </body>
 </html>

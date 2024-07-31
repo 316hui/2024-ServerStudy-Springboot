@@ -2719,3 +2719,125 @@ java.sql.SQLSyntaxErrorException: (conn=1084) Unknown column 'ta.id' in 'order c
 11:47:51.140 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 8, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
 11:47:51.148 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 3, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
 11:47:51.149 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+11:48:51.765 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12152 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:48:51.765 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12152 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:48:51.765 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:48:51.765 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:48:51.765 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:48:51.765 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:48:52.133 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.39 seconds (process running for 77.684) 
+11:48:52.133 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.39 seconds (process running for 77.684) 
+11:48:52.583 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : check page 1 
+11:48:52.583 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : check page 1 
+11:48:52.587 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+11:48:52.588 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+11:48:52.588 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+11:48:52.588 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 9 
+11:48:52.588 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+11:48:52.589 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id ORDER BY ROWNUM DESC LIMIT ?, ? 
+11:48:52.590 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+11:48:52.601 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:48:52.601 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 9, 2, 222w, 2222, 2024-07-17 09:50:11, 13, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:48:52.602 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 8, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:48:52.602 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 3, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:48:52.603 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+11:48:53.604 DEBUG --- [http-nio-8080-exec-2] c.e.demo.controller.Controller : check page 1 
+11:48:53.604 DEBUG --- [http-nio-8080-exec-2] c.e.demo.controller.Controller : check page 1 
+11:48:53.604 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+11:48:53.605 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+11:48:53.605 TRACE --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+11:48:53.605 TRACE --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 9 
+11:48:53.605 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+11:48:53.606 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id ORDER BY ROWNUM DESC LIMIT ?, ? 
+11:48:53.606 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+11:48:53.622 TRACE --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:48:53.623 TRACE --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 9, 2, 222w, 2222, 2024-07-17 09:50:11, 13, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:48:53.623 TRACE --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 8, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:48:53.623 TRACE --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 3, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:48:53.623 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+11:48:57.037 DEBUG --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.u_id = tb.u_id WHERE b_id = ? 
+11:48:57.037 DEBUG --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 2(Integer) 
+11:48:57.038 TRACE --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:48:57.038 TRACE --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 2, 222w, 2222, 2024-07-17 09:50:11, 13, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:48:57.038 DEBUG --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:48:57.039 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+11:48:57.039 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 2(Integer) 
+11:48:57.041 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+11:48:58.748 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : check page 1 
+11:48:58.748 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : check page 1 
+11:48:58.749 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+11:48:58.749 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+11:48:58.750 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+11:48:58.750 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 9 
+11:48:58.750 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+11:48:58.750 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id ORDER BY ROWNUM DESC LIMIT ?, ? 
+11:48:58.750 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+11:48:58.761 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:48:58.761 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 9, 2, 222w, 2222, 2024-07-17 09:50:11, 14, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:48:58.761 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 8, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:48:58.761 TRACE --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 3, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:48:58.762 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+11:49:00.195 DEBUG --- [http-nio-8080-exec-5] c.e.demo.controller.Controller : check page 1 
+11:49:00.195 DEBUG --- [http-nio-8080-exec-5] c.e.demo.controller.Controller : check page 1 
+11:49:00.195 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+11:49:00.195 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+11:49:00.196 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+11:49:00.196 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 9 
+11:49:00.196 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+11:49:00.196 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id ORDER BY ROWNUM DESC LIMIT ?, ? 
+11:49:00.196 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+11:49:00.212 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:49:00.212 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 9, 2, 222w, 2222, 2024-07-17 09:50:11, 14, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:49:00.213 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 8, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:49:00.213 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 3, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:49:00.214 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+11:49:01.852 DEBUG --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : check page 3 
+11:49:01.852 DEBUG --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : check page 3 
+11:49:01.855 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+11:49:01.855 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+11:49:01.855 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+11:49:01.855 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 9 
+11:49:01.855 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+11:49:01.856 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id ORDER BY ROWNUM DESC LIMIT ?, ? 
+11:49:01.856 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 6(Integer), 6(Integer), 3(Integer) 
+11:49:01.864 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:49:01.865 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==        Row: -3, 8, aaaaaa, aaa777, 2024-07-29 11:04:19, 0, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:49:01.865 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==        Row: -4, 9, ccc333, ddd4555, 2024-07-29 11:21:14, 0, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:49:01.865 TRACE --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==        Row: -5, 10, 오늘은 7월 30일, 입니다, 2024-07-30 09:15:14, 0, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:49:01.865 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+11:49:03.444 DEBUG --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : check page 2 
+11:49:03.444 DEBUG --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : check page 2 
+11:49:03.445 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+11:49:03.445 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+11:49:03.446 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+11:49:03.446 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 9 
+11:49:03.446 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+11:49:03.446 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id ORDER BY ROWNUM DESC LIMIT ?, ? 
+11:49:03.446 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 3(Integer), 3(Integer), 3(Integer) 
+11:49:03.456 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:49:03.456 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 3, 5, ddd, dddd, 2024-07-25 11:37:17, 0, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:49:03.456 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 2, 6, hello, hi, 2024-07-25 11:37:33, 0, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:49:03.456 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 1, 7, fth, fffffffff, 2024-07-29 09:47:40, 0, zzzzz22, zzzzz22, $2a$10$DnaYg1VjGi18D5vuUResvu3lQC1etKAmBcVG54/bidMk3EPofkOBS, asdfasfd, 2024-07-18 10:12:22, 1, 1, 1, 1 
+11:49:03.456 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+11:49:05.254 DEBUG --- [http-nio-8080-exec-8] c.e.demo.controller.Controller : check page 1 
+11:49:05.254 DEBUG --- [http-nio-8080-exec-8] c.e.demo.controller.Controller : check page 1 
+11:49:05.255 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+11:49:05.255 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+11:49:05.255 TRACE --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+11:49:05.255 TRACE --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 9 
+11:49:05.256 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+11:49:05.256 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id ORDER BY ROWNUM DESC LIMIT ?, ? 
+11:49:05.256 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+11:49:05.266 TRACE --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:49:05.266 TRACE --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 9, 2, 222w, 2222, 2024-07-17 09:50:11, 14, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:49:05.267 TRACE --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 8, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:49:05.267 TRACE --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 3, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:49:05.267 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+11:49:15.083 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12152 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:49:15.083 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 12152 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:49:15.083 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:49:15.083 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:49:15.083 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:49:15.083 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:49:15.426 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.365 seconds (process running for 100.978) 
+11:49:15.426 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.365 seconds (process running for 100.978) 

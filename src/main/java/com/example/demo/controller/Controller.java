@@ -19,10 +19,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.domain.Board;
+import com.example.demo.domain.Comment;
 import com.example.demo.domain.Pagination;
 import com.example.demo.domain.Search;
 import com.example.demo.domain.User;
 import com.example.demo.service.BoardService;
+import com.example.demo.service.CommentService;
 import com.example.demo.service.UserService;
 
 @org.springframework.stereotype.Controller
@@ -31,6 +33,7 @@ public class Controller {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired UserService userservice;
 	@Autowired BoardService boardservice;
+	@Autowired CommentService commentService;
 	@Autowired PasswordEncoder passwordEncoder;
 	
 	
@@ -99,7 +102,7 @@ public class Controller {
 	}
 	@RequestMapping(value="/logout")
 	public String logout(Model model) {
-		return "/logout";
+		return "/logout";    
 	}
 	
 	
@@ -124,6 +127,7 @@ public class Controller {
 		List<Board> boards = boardservice.getAllBoards(pagination);
 		model.addAttribute("boards", boards);
 		model.addAttribute("pagination", pagination);
+		
 		return "/boardList";
 	}
 	
@@ -140,11 +144,22 @@ public class Controller {
 	}
 
 	@RequestMapping("/board/readBoard")
-	public String readBoard(@RequestParam(value="b_id", required=true) int idx, Model model) {
+	public String readBoard(@RequestParam(value="b_id", required=true) int idx, 
+							@RequestParam(value="c_content", required=true) String cContent,
+							@RequestParam(value="user", required=true) User user,
+							Model model) {
 		Board board = boardservice.readBoard(idx);
 		boardservice.increaseViews(board); //조회수 올리기
-		model.addAttribute("board", board);
 		
+		//------------
+		Comment comment = new Comment(user, board, cContent); //컨텐츠가 입력되었을 시 실행.
+		
+		commentService.createComment(comment);
+		List<Comment> comments = commentService.getAllComments(idx);
+		//위에 내일 구현.
+		
+		model.addAttribute("board", board);
+		model.addAttribute("comments", comments);
 		return "/detailBoard";
 	}
 	
