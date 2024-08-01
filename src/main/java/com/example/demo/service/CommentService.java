@@ -6,5 +6,5 @@ import com.example.demo.domain.Comment;
 
 public interface CommentService {
 	public void createComment(Comment comment);
-	public List<Comment> getAllComments();
+	public List<Comment> getAllComments(int bId);
 }

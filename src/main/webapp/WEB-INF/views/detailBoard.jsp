@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -108,6 +109,7 @@
     </style>
 </head>
 <body>
+	
 	<h1>게시판 상세페이지</h1>
 	<table>
 		<tr>
@@ -149,12 +151,19 @@
     
     <div class="comment-section">
     	<h2>댓글</h2>
-    
+    	
+    	<sec:authorize access="isAuthenticated()">
+    		<sec:authentication property="principal" var="user"/>
+    	</sec:authorize>
     	<div class="comment-form">
-    		<form action="/board/readBoard" method="post">
-    			<input type="hidden" name="cId" value="${comment.cId}">
+    		<form action="/board/createComment" method="post">
+    			<input type="hidden" name="user.username" value="${user.username }">
+    			<input type="hidden" name="board.bId" value="${board.bId }">
     			<textarea name="cContent" placeholder="댓글을 입력하세요"></textarea>
-    			<button type="submit">댓글 작성</button>
+    			<button type="submit" >댓글 작성</button>
+    			
+    			
+    			
     		</form>
     	</div>
     	
@@ -162,7 +171,7 @@
     		<c:forEach var="comment" items="${comments}">
     			<li>
     				<div class="comment-author">${comment.user.uName }</div>
-    				<div class="comment-date">${comment.cDateTime }</div>
+    				<div class="comment-date">${comment.cDatetime }</div>
     				<div class="comment-content">${comment.cContent }</div>
     			</li>
     		</c:forEach>

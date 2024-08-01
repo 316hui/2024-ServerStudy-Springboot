@@ -15,14 +15,13 @@ public class CommentServiceImpl implements CommentService{
 
 	@Override
 	public void createComment(Comment comment) {
-		// TODO Auto-generated method stub
+		commentMapper.createComment(comment);
 		
 	}
 
 	@Override
 	public List<Comment> getAllComments(int bId) {
-		// TODO Auto-generated method stub
-		return null;
+		return commentMapper.getAllComments();
 	}
 
 }

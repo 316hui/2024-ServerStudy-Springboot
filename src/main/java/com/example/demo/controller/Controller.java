@@ -144,24 +144,33 @@ public class Controller {
 	}
 
 	@RequestMapping("/board/readBoard")
-	public String readBoard(@RequestParam(value="b_id", required=true) int idx, 
-							@RequestParam(value="c_content", required=true) String cContent,
-							@RequestParam(value="user", required=true) User user,
+	public String readBoard(@RequestParam(value="b_id", required=true) int bId, 
 							Model model) {
-		Board board = boardservice.readBoard(idx);
+		Board board = boardservice.readBoard(bId);
 		boardservice.increaseViews(board); //조회수 올리기
 		
 		//------------
-		Comment comment = new Comment(user, board, cContent); //컨텐츠가 입력되었을 시 실행.
-		
-		commentService.createComment(comment);
-		List<Comment> comments = commentService.getAllComments(idx);
-		//위에 내일 구현.
+
+		List<Comment> comments = commentService.getAllComments(bId);
 		
 		model.addAttribute("board", board);
 		model.addAttribute("comments", comments);
 		return "/detailBoard";
 	}
+	
+	@RequestMapping("/board/createComment")
+	public String createComment(Comment comment) {
+		
+		
+		//Board board = boardservice.readBoard(bId);
+		//Comment newComment = new Comment(comment.getUser(), comment.getcContent(), board);
+		commentService.createComment(comment);
+		
+		return "redirect:/board/readBoard?b_id="+comment.getBoard().getbId();
+	}
+	
+	
+	
 	
 	@RequestMapping("/updateBoard")
 	public String editBoard(@RequestParam("b_id") int idx, Model model) {

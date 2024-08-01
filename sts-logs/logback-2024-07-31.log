@@ -2010,3 +2010,9 @@ Caused by: org.xml.sax.SAXParseException: XML document structures must start and
 	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342)
 	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260)
 	... 84 common frames omitted
+11:50:01.642 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 4024 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:50:01.642 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 4024 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:50:01.643 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:50:01.643 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:50:01.643 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:50:01.643 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 

@@ -5,15 +5,15 @@ public class Comment {
 	private Board board;
 	private String cDatetime;
 	private String cContent;
+	private int bId;
+	//private int cId;
 	
-	private int cId;
-	
-	public Comment(User user, Board board, String cContent) {
-		this.user = user;
-		this.cContent = cContent;
-		this.board = board;
-	}
-	
+	/*
+	 * public Comment(User user, String cContent, Board board) { this.user = user;
+	 * this.cContent = cContent; this.board = board; }
+	 */
+	//pojo 라는 오류. jsp에서 넘어오는 값을 스프링을 (Comment comment) 처럼 사용하고 싶으면 '기본생성자'
+
 	public User getUser() {
 		return user;
 	}
@@ -38,12 +38,19 @@ public class Comment {
 	public void setcContent(String cContent) {
 		this.cContent = cContent;
 	}
-	public int getcId() {
+	public int getbId() {
+		return bId;
+	}
+	public void setbId(int bId) {
+		this.bId = bId;
+	}
+/*	public int getcId() {
 		return cId;
 	}
 	public void setcId(int cId) {
 		this.cId = cId;
 	}
+	*/
 	
 	
 }

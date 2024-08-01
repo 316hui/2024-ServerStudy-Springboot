@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.CommentMapper">
+
+	
+	<select id="getAllComments" resultType="Comment" parameterType="int">
+		SELECT		*
+		FROM		lc_comment
+		WHERE		lc_comment.b_id = #{bId}
+	</select>
+	
+	<insert id="createComment" parameterType="Comment">
+		INSERT	INTO 	lc_comment (
+			c_content,
+			u_id,
+			b_id
+		)VALUES (
+			#{cContent},
+			#{user.username},
+			#{Board.bId}
+		)
+	</insert>
+</mapper>
