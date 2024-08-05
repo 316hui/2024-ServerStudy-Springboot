@@ -21,7 +21,7 @@ public class CommentServiceImpl implements CommentService{
 
 	@Override
 	public List<Comment> getAllComments(int bId) {
-		return commentMapper.getAllComments();
+		return commentMapper.getAllComments(bId);
 	}
 
 }

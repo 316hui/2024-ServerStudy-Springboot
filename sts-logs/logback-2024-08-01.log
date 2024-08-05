@@ -2302,3 +2302,54 @@ org.apache.ibatis.reflection.ReflectionException: There is no getter for propert
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1570)
+11:48:43.702 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 1944 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:48:43.702 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 1944 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+11:48:43.703 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:48:43.703 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+11:48:43.703 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:48:43.703 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+11:48:44.091 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.411 seconds (process running for 440.907) 
+11:48:44.091 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.411 seconds (process running for 440.907) 
+11:48:48.928 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.CommentMapper.createComment : ==>  Preparing: INSERT INTO lc_comment ( c_content, u_id, b_id )VALUES ( ?, ?, ? ) 
+11:48:48.929 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.CommentMapper.createComment : ==> Parameters: dddd(String), 1(String), 5(Integer) 
+11:48:48.931 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.CommentMapper.createComment : <==    Updates: 1 
+11:48:48.937 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.u_id = tb.u_id WHERE b_id = ? 
+11:48:48.937 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 5(Integer) 
+11:48:48.938 TRACE --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:48:48.938 TRACE --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 5, ddd, dddd, 2024-07-25 11:37:17, 18, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:48:48.938 DEBUG --- [http-nio-8080-exec-2] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:48:48.938 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+11:48:48.939 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 5(Integer) 
+11:48:48.940 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+11:48:48.940 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.C.getAllComments : ==>  Preparing: SELECT * FROM lc_comment WHERE lc_comment.b_id = ? 
+11:48:48.940 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.C.getAllComments : ==> Parameters: null 
+11:48:48.941 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.C.getAllComments : <==      Total: 0 
+11:48:51.601 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.CommentMapper.createComment : ==>  Preparing: INSERT INTO lc_comment ( c_content, u_id, b_id )VALUES ( ?, ?, ? ) 
+11:48:51.601 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.CommentMapper.createComment : ==> Parameters: dddd(String), 1(String), 5(Integer) 
+11:48:51.603 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.CommentMapper.createComment : <==    Updates: 1 
+11:48:51.608 DEBUG --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.u_id = tb.u_id WHERE b_id = ? 
+11:48:51.608 DEBUG --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 5(Integer) 
+11:48:51.608 TRACE --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:48:51.608 TRACE --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 5, ddd, dddd, 2024-07-25 11:37:17, 19, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:48:51.609 DEBUG --- [http-nio-8080-exec-4] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:48:51.609 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+11:48:51.609 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 5(Integer) 
+11:48:51.612 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+11:48:51.612 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.C.getAllComments : ==>  Preparing: SELECT * FROM lc_comment WHERE lc_comment.b_id = ? 
+11:48:51.612 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.C.getAllComments : ==> Parameters: null 
+11:48:51.612 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.C.getAllComments : <==      Total: 0 
+11:49:14.433 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.CommentMapper.createComment : ==>  Preparing: INSERT INTO lc_comment ( c_content, u_id, b_id )VALUES ( ?, ?, ? ) 
+11:49:14.433 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.CommentMapper.createComment : ==> Parameters: ??엥 진짜 되는거였냐고..
+(String), 1(String), 5(Integer) 
+11:49:14.443 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.CommentMapper.createComment : <==    Updates: 1 
+11:49:14.446 DEBUG --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.u_id = tb.u_id WHERE b_id = ? 
+11:49:14.446 DEBUG --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 5(Integer) 
+11:49:14.446 TRACE --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:49:14.446 TRACE --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 5, ddd, dddd, 2024-07-25 11:37:17, 20, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:49:14.447 DEBUG --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+11:49:14.447 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+11:49:14.447 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 5(Integer) 
+11:49:14.449 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+11:49:14.449 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : ==>  Preparing: SELECT * FROM lc_comment WHERE lc_comment.b_id = ? 
+11:49:14.449 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : ==> Parameters: null 
+11:49:14.449 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : <==      Total: 0 

@@ -160,8 +160,6 @@ public class Controller {
 	
 	@RequestMapping("/board/createComment")
 	public String createComment(Comment comment) {
-		
-		
 		//Board board = boardservice.readBoard(bId);
 		//Comment newComment = new Comment(comment.getUser(), comment.getcContent(), board);
 		commentService.createComment(comment);

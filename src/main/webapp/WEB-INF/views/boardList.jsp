@@ -67,17 +67,13 @@
             <button>게시물 등록</button>
         </a>
     </div>
-    <form action="<%= buttonAction %>" method="post">
-    	<button type="submit"><%= buttonText %></button>
-    </form>
-    <!-- <div class="login-button">
-        <a href="/login">
-            <button>로그인</button>
-        </a>
-         <a href="/logout">
-            <button>로그아웃</button>
-        </a>
-    </div> -->
+ 	
+ 	<div class="join-button">
+ 		<a href="/signup">
+ 			<button>회원가입</button>
+ 		</a>
+ 	</div>
+ 	
     <div class="login-button">
 	    <sec:authorize access="!isAuthenticated()">
 	        <a href="/login">

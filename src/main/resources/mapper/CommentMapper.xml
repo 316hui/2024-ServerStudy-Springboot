@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.CommentMapper">
+	<resultMap id="CommentMap" type="Comment">
+		
+		<result property="cDatetime" column="c_datetime" />
+		<result property="cContent" column="c_content" />
+		<association property="user" resultMap="UserMap" />
+		<association property="board" resultMap="BoardMap" />
+		<!-- id property="cId" column="c_id" /> -->
+	</resultMap>
+	
+	<resultMap type="User" id="UserMap">
+		<id property="username" column="u_id" />
+		<result property="password" column="u_password" />
+		<result property="uName" column="u_name" />
+		<result property="uDateTime" column="u_datetime" />
+	</resultMap>
+	
+	<resultMap type="Board" id="BoardMap">
+		<id property="bId" column="b_id" />
+		<result property="bTitle" column="b_title" />
+		<result property="bContent" column="b_content" />
+		<result property="bDatetime" column="b_datetime" />
+		<result property="bViews" column= "b_views" />
+	</resultMap>
 
 	
-	<select id="getAllComments" resultType="Comment" parameterType="int">
+	<select id="getAllComments" resultMap="CommentMap" parameterType="int">
 		SELECT		*
 		FROM		lc_comment
 		WHERE		lc_comment.b_id = #{bId}
