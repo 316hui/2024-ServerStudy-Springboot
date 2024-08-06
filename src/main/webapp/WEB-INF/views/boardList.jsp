@@ -69,7 +69,7 @@
     </div>
  	
  	<div class="join-button">
- 		<a href="/signup">
+ 		<a href="beforeSignup">
  			<button>회원가입</button>
  		</a>
  	</div>

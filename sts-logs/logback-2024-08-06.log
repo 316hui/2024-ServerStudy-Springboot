@@ -1,0 +1,687 @@
+09:11:13.206 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 4056 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+09:11:13.206 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 4056 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+09:11:13.207 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+09:11:13.207 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+09:11:13.208 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+09:11:13.208 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+09:11:14.864 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.035 seconds (process running for 2.546) 
+09:11:14.864 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.035 seconds (process running for 2.546) 
+09:11:40.875 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 4056 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+09:11:40.875 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 4056 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+09:11:40.875 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+09:11:40.875 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+09:11:40.875 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+09:11:40.875 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+09:11:41.281 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.433 seconds (process running for 28.962) 
+09:11:41.281 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.433 seconds (process running for 28.962) 
+09:12:49.847 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : check page 1 
+09:12:49.847 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : check page 1 
+09:12:49.956 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+09:12:49.971 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+09:12:49.986 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+09:12:49.986 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+09:12:49.987 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+09:12:49.994 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+09:12:49.996 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+09:12:49.999 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:12:49.999 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:12:50.000 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+09:12:50.000 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 42, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:12:50.000 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+09:12:58.598 DEBUG --- [http-nio-8080-exec-5] c.e.demo.mapper.UserMapper.readUser : ==>  Preparing: SELECT u_id as username, u_password as password, u_name as uName, u_isAccountNonExpired as isAccountNonExpired, u_isAccountNonLocked as isAccountNonLocked, u_isCredentialNonExpired as isCredentialsNonExpired, u_isEnabled as isEnabled FROM lc_user WHERE 1=1 AND u_id = ? 
+09:12:58.600 DEBUG --- [http-nio-8080-exec-5] c.e.demo.mapper.UserMapper.readUser : ==> Parameters: 1(String) 
+09:12:58.600 TRACE --- [http-nio-8080-exec-5] c.e.demo.mapper.UserMapper.readUser : <==    Columns: username, password, uName, isAccountNonExpired, isAccountNonLocked, isCredentialsNonExpired, isEnabled 
+09:12:58.601 TRACE --- [http-nio-8080-exec-5] c.e.demo.mapper.UserMapper.readUser : <==        Row: 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 1, 1, 1, 1 
+09:12:58.602 DEBUG --- [http-nio-8080-exec-5] c.e.demo.mapper.UserMapper.readUser : <==      Total: 1 
+09:12:58.602 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.UserMapper.readAuthorities : ==>  Preparing: SELECT u_auth FROM lc_auth WHERE 1=1 AND u_id= ? 
+09:12:58.602 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.UserMapper.readAuthorities : ==> Parameters: 1(String) 
+09:12:58.603 TRACE --- [http-nio-8080-exec-5] c.e.d.m.UserMapper.readAuthorities : <==    Columns: u_auth 
+09:12:58.603 TRACE --- [http-nio-8080-exec-5] c.e.d.m.UserMapper.readAuthorities : <==        Row: ROLE_USER 
+09:12:58.603 TRACE --- [http-nio-8080-exec-5] c.e.d.m.UserMapper.readAuthorities : <==        Row: ROLE_ADMIN 
+09:12:58.603 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.UserMapper.readAuthorities : <==      Total: 2 
+09:12:58.682 DEBUG --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : debug 
+09:12:58.682 DEBUG --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : debug 
+09:12:58.682 INFO  --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : info 
+09:12:58.682 INFO  --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : info 
+09:12:58.683 ERROR --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : error 
+09:12:58.683 ERROR --- [http-nio-8080-exec-6] c.e.demo.controller.Controller : error 
+09:12:58.688 DEBUG --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : check page 1 
+09:12:58.688 DEBUG --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : check page 1 
+09:12:58.688 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+09:12:58.689 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+09:12:58.689 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+09:12:58.689 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+09:12:58.689 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+09:12:58.689 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+09:12:58.689 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+09:12:58.690 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:12:58.690 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:12:58.691 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+09:12:58.691 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 42, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:12:58.691 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+09:13:00.858 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.u_id = tb.u_id WHERE b_id = ? 
+09:13:00.858 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 5(Integer) 
+09:13:00.859 TRACE --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:13:00.859 TRACE --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 5, ddd, dddd, 2024-07-25 11:37:17, 42, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:13:00.859 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+09:13:00.860 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+09:13:00.861 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 5(Integer) 
+09:13:00.865 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+09:13:00.865 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : ==>  Preparing: SELECT * FROM lc_comment WHERE lc_comment.b_id = ? 
+09:13:00.865 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : ==> Parameters: 5(Integer) 
+09:13:00.866 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==    Columns: u_id, b_id, c_datetime, c_content, c_id 
+09:13:00.866 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==        Row: 1, 5, 2024-08-01 11:48:48, dddd, 1 
+09:13:00.866 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==        Row: 1, 5, 2024-08-01 11:48:51, dddd, 2 
+09:13:00.867 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==        Row: 1, 5, 2024-08-01 11:49:14, ??엥 진짜 되는거였냐고..
+, 3 
+09:13:00.867 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==        Row: 1, 5, 2024-08-05 10:43:03, dddddddddddddddd, 9 
+09:13:00.867 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==        Row: 1, 5, 2024-08-05 10:52:31, ddd, 10 
+09:13:00.867 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==        Row: 1, 5, 2024-08-05 11:22:40, 22222piece, 11 
+09:13:00.868 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==      Total: 6 
+09:13:31.165 DEBUG --- [http-nio-8080-exec-9] c.e.demo.controller.Controller : check page 1 
+09:13:31.165 DEBUG --- [http-nio-8080-exec-9] c.e.demo.controller.Controller : check page 1 
+09:13:31.166 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+09:13:31.166 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+09:13:31.166 TRACE --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+09:13:31.166 TRACE --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+09:13:31.166 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+09:13:31.167 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+09:13:31.167 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+09:13:31.167 TRACE --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:13:31.167 TRACE --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:13:31.168 TRACE --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+09:13:31.168 TRACE --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 43, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:13:31.168 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+09:13:32.881 ERROR --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[.[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: rawPassword cannot be null] with root cause 
+java.lang.IllegalArgumentException: rawPassword cannot be null
+	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.encode(BCryptPasswordEncoder.java:107)
+	at com.example.demo.controller.Controller.signup(Controller.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:110)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+09:14:36.533 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 13024 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+09:14:36.533 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 13024 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+09:14:36.534 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+09:14:36.534 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+09:14:36.534 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+09:14:36.534 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+09:14:38.393 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.301 seconds (process running for 3.074) 
+09:14:38.393 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 2.301 seconds (process running for 3.074) 
+09:14:41.719 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : check page 1 
+09:14:41.719 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : check page 1 
+09:14:41.840 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+09:14:41.856 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+09:14:41.868 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+09:14:41.868 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+09:14:41.869 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+09:14:41.876 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+09:14:41.878 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+09:14:41.880 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:14:41.880 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:14:41.881 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+09:14:41.881 TRACE --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 43, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:14:41.882 DEBUG --- [http-nio-8080-exec-1] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+09:14:44.130 ERROR --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: rawPassword cannot be null] with root cause 
+java.lang.IllegalArgumentException: rawPassword cannot be null
+	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.encode(BCryptPasswordEncoder.java:107)
+	at com.example.demo.controller.Controller.signup(Controller.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:110)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+09:17:50.966 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 5108 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+09:17:50.966 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 5108 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+09:17:50.967 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+09:17:50.967 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+09:17:50.968 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+09:17:50.968 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+09:17:52.711 WARN  --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : Unable to start LiveReload server 
+09:17:52.739 WARN  --- [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop' 
+09:17:52.771 ERROR --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+ 
+09:17:54.978 DEBUG --- [http-nio-8080-exec-5] c.e.demo.controller.Controller : check page 1 
+09:17:54.978 DEBUG --- [http-nio-8080-exec-5] c.e.demo.controller.Controller : check page 1 
+09:17:54.979 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+09:17:54.979 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+09:17:54.979 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+09:17:54.979 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+09:17:54.979 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+09:17:54.980 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+09:17:54.980 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+09:17:54.981 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:17:54.981 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:17:54.981 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+09:17:54.981 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 43, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:17:54.982 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+09:17:58.612 DEBUG --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : debug 
+09:17:58.612 DEBUG --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : debug 
+09:17:58.612 INFO  --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : info 
+09:17:58.612 INFO  --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : info 
+09:17:58.613 ERROR --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : error 
+09:17:58.613 ERROR --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : error 
+09:17:58.618 DEBUG --- [http-nio-8080-exec-8] c.e.demo.controller.Controller : check page 1 
+09:17:58.618 DEBUG --- [http-nio-8080-exec-8] c.e.demo.controller.Controller : check page 1 
+09:17:58.619 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+09:17:58.619 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+09:17:58.619 TRACE --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+09:17:58.619 TRACE --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+09:17:58.619 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+09:17:58.620 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+09:17:58.620 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+09:17:58.620 TRACE --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:17:58.620 TRACE --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:17:58.621 TRACE --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+09:17:58.621 TRACE --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 43, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:17:58.621 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+09:18:07.606 DEBUG --- [http-nio-8080-exec-10] c.e.demo.controller.Controller : check page 1 
+09:18:07.606 DEBUG --- [http-nio-8080-exec-10] c.e.demo.controller.Controller : check page 1 
+09:18:07.607 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+09:18:07.607 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+09:18:07.607 TRACE --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+09:18:07.607 TRACE --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+09:18:07.607 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+09:18:07.608 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+09:18:07.608 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+09:18:07.609 TRACE --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:18:07.609 TRACE --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:18:07.609 TRACE --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+09:18:07.610 TRACE --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 43, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:18:07.610 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+09:18:41.617 ERROR --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: rawPassword cannot be null] with root cause 
+java.lang.IllegalArgumentException: rawPassword cannot be null
+	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.encode(BCryptPasswordEncoder.java:107)
+	at com.example.demo.controller.Controller.signup(Controller.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:145)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+09:20:30.703 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 13024 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+09:20:30.703 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 13024 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+09:20:30.703 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+09:20:30.703 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+09:20:30.703 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+09:20:30.703 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+09:20:31.179 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.505 seconds (process running for 355.86) 
+09:20:31.179 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 0.505 seconds (process running for 355.86) 
+09:22:08.921 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 6604 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+09:22:08.921 INFO  --- [restartedMain] com.example.demo.DemoApplication : Starting DemoApplication using Java 22.0.1 with PID 6604 (C:\Users\L10A\Documents\work7\demo\bin\main started by L10A in C:\Users\L10A\Documents\work7\demo) 
+09:22:08.922 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+09:22:08.922 DEBUG --- [restartedMain] com.example.demo.DemoApplication : Running with Spring Boot v3.3.1, Spring v6.1.10 
+09:22:08.922 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+09:22:08.922 INFO  --- [restartedMain] com.example.demo.DemoApplication : No active profile set, falling back to 1 default profile: "default" 
+09:22:10.444 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.889 seconds (process running for 2.384) 
+09:22:10.444 INFO  --- [restartedMain] com.example.demo.DemoApplication : Started DemoApplication in 1.889 seconds (process running for 2.384) 
+09:22:19.634 DEBUG --- [http-nio-8080-exec-3] c.e.demo.mapper.UserMapper.readUser : ==>  Preparing: SELECT u_id as username, u_password as password, u_name as uName, u_isAccountNonExpired as isAccountNonExpired, u_isAccountNonLocked as isAccountNonLocked, u_isCredentialNonExpired as isCredentialsNonExpired, u_isEnabled as isEnabled FROM lc_user WHERE 1=1 AND u_id = ? 
+09:22:19.650 DEBUG --- [http-nio-8080-exec-3] c.e.demo.mapper.UserMapper.readUser : ==> Parameters: 1(String) 
+09:22:19.662 TRACE --- [http-nio-8080-exec-3] c.e.demo.mapper.UserMapper.readUser : <==    Columns: username, password, uName, isAccountNonExpired, isAccountNonLocked, isCredentialsNonExpired, isEnabled 
+09:22:19.663 TRACE --- [http-nio-8080-exec-3] c.e.demo.mapper.UserMapper.readUser : <==        Row: 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 1, 1, 1, 1 
+09:22:19.665 DEBUG --- [http-nio-8080-exec-3] c.e.demo.mapper.UserMapper.readUser : <==      Total: 1 
+09:22:19.669 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.UserMapper.readAuthorities : ==>  Preparing: SELECT u_auth FROM lc_auth WHERE 1=1 AND u_id= ? 
+09:22:19.669 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.UserMapper.readAuthorities : ==> Parameters: 1(String) 
+09:22:19.670 TRACE --- [http-nio-8080-exec-3] c.e.d.m.UserMapper.readAuthorities : <==    Columns: u_auth 
+09:22:19.670 TRACE --- [http-nio-8080-exec-3] c.e.d.m.UserMapper.readAuthorities : <==        Row: ROLE_USER 
+09:22:19.671 TRACE --- [http-nio-8080-exec-3] c.e.d.m.UserMapper.readAuthorities : <==        Row: ROLE_ADMIN 
+09:22:19.671 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.UserMapper.readAuthorities : <==      Total: 2 
+09:22:19.749 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : debug 
+09:22:19.749 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : debug 
+09:22:19.749 INFO  --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : info 
+09:22:19.749 INFO  --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : info 
+09:22:19.749 ERROR --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : error 
+09:22:19.749 ERROR --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : error 
+09:22:19.763 DEBUG --- [http-nio-8080-exec-5] c.e.demo.controller.Controller : check page 1 
+09:22:19.763 DEBUG --- [http-nio-8080-exec-5] c.e.demo.controller.Controller : check page 1 
+09:22:19.783 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+09:22:19.783 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+09:22:19.784 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+09:22:19.784 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+09:22:19.784 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+09:22:19.784 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+09:22:19.785 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+09:22:19.786 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:22:19.786 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:22:19.787 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+09:22:19.787 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 43, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:22:19.788 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+09:22:25.995 DEBUG --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.u_id = tb.u_id WHERE b_id = ? 
+09:22:25.995 DEBUG --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 5(Integer) 
+09:22:25.996 TRACE --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:22:25.996 TRACE --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 5, ddd, dddd, 2024-07-25 11:37:17, 43, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:22:25.996 DEBUG --- [http-nio-8080-exec-6] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+09:22:25.997 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+09:22:25.997 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 5(Integer) 
+09:22:26.000 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+09:22:26.000 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : ==>  Preparing: SELECT * FROM lc_comment WHERE lc_comment.b_id = ? 
+09:22:26.000 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : ==> Parameters: 5(Integer) 
+09:22:26.001 TRACE --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : <==    Columns: u_id, b_id, c_datetime, c_content, c_id 
+09:22:26.001 TRACE --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : <==        Row: 1, 5, 2024-08-01 11:48:48, dddd, 1 
+09:22:26.001 TRACE --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : <==        Row: 1, 5, 2024-08-01 11:48:51, dddd, 2 
+09:22:26.001 TRACE --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : <==        Row: 1, 5, 2024-08-01 11:49:14, ??엥 진짜 되는거였냐고..
+, 3 
+09:22:26.002 TRACE --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : <==        Row: 1, 5, 2024-08-05 10:43:03, dddddddddddddddd, 9 
+09:22:26.002 TRACE --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : <==        Row: 1, 5, 2024-08-05 10:52:31, ddd, 10 
+09:22:26.002 TRACE --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : <==        Row: 1, 5, 2024-08-05 11:22:40, 22222piece, 11 
+09:22:26.003 DEBUG --- [http-nio-8080-exec-6] c.e.d.m.C.getAllComments : <==      Total: 6 
+09:22:28.550 DEBUG --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : check page 1 
+09:22:28.550 DEBUG --- [http-nio-8080-exec-7] c.e.demo.controller.Controller : check page 1 
+09:22:28.550 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+09:22:28.550 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+09:22:28.551 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+09:22:28.551 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+09:22:28.551 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+09:22:28.551 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+09:22:28.552 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+09:22:28.552 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:22:28.552 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:22:28.553 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+09:22:28.553 TRACE --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 44, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:22:28.554 DEBUG --- [http-nio-8080-exec-7] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+09:22:39.147 DEBUG --- [http-nio-8080-exec-9] c.e.d.mapper.UserMapper.createUser : ==>  Preparing: INSERT INTO lc_user ( u_id, u_password, u_name, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled )VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+09:22:39.148 DEBUG --- [http-nio-8080-exec-9] c.e.d.mapper.UserMapper.createUser : ==> Parameters: 3(String), $2a$10$t/zHwo9AfNbUVn77Vsrdo.1v7eLGKwi9cbYsC524ZtPH4nGBCeK.K(String), 3(String), true(Boolean), true(Boolean), true(Boolean), true(Boolean) 
+09:22:39.149 DEBUG --- [http-nio-8080-exec-9] c.e.d.mapper.UserMapper.createUser : <==    Updates: 1 
+09:22:39.151 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.UserMapper.createAuthority : ==>  Preparing: INSERT INTO lc_auth( u_id, u_auth )VALUES (?, ?) ON DUPLICATE KEY UPDATE u_id = ? 
+09:22:39.151 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.UserMapper.createAuthority : ==> Parameters: 3(String), ROLE_USER(String), 3(String) 
+09:22:39.153 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.UserMapper.createAuthority : <==    Updates: 1 
+09:22:42.160 DEBUG --- [http-nio-8080-exec-10] c.e.demo.mapper.UserMapper.readUser : ==>  Preparing: SELECT u_id as username, u_password as password, u_name as uName, u_isAccountNonExpired as isAccountNonExpired, u_isAccountNonLocked as isAccountNonLocked, u_isCredentialNonExpired as isCredentialsNonExpired, u_isEnabled as isEnabled FROM lc_user WHERE 1=1 AND u_id = ? 
+09:22:42.160 DEBUG --- [http-nio-8080-exec-10] c.e.demo.mapper.UserMapper.readUser : ==> Parameters: 3(String) 
+09:22:42.161 TRACE --- [http-nio-8080-exec-10] c.e.demo.mapper.UserMapper.readUser : <==    Columns: username, password, uName, isAccountNonExpired, isAccountNonLocked, isCredentialsNonExpired, isEnabled 
+09:22:42.161 TRACE --- [http-nio-8080-exec-10] c.e.demo.mapper.UserMapper.readUser : <==        Row: 3, $2a$10$t/zHwo9AfNbUVn77Vsrdo.1v7eLGKwi9cbYsC524ZtPH4nGBCeK.K, 3, 1, 1, 1, 1 
+09:22:42.161 DEBUG --- [http-nio-8080-exec-10] c.e.demo.mapper.UserMapper.readUser : <==      Total: 1 
+09:22:42.161 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.UserMapper.readAuthorities : ==>  Preparing: SELECT u_auth FROM lc_auth WHERE 1=1 AND u_id= ? 
+09:22:42.162 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.UserMapper.readAuthorities : ==> Parameters: 3(String) 
+09:22:42.162 TRACE --- [http-nio-8080-exec-10] c.e.d.m.UserMapper.readAuthorities : <==    Columns: u_auth 
+09:22:42.162 TRACE --- [http-nio-8080-exec-10] c.e.d.m.UserMapper.readAuthorities : <==        Row: ROLE_USER 
+09:22:42.162 DEBUG --- [http-nio-8080-exec-10] c.e.d.m.UserMapper.readAuthorities : <==      Total: 1 
+09:22:42.240 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : debug 
+09:22:42.240 DEBUG --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : debug 
+09:22:42.240 INFO  --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : info 
+09:22:42.240 INFO  --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : info 
+09:22:42.240 ERROR --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : error 
+09:22:42.240 ERROR --- [http-nio-8080-exec-1] c.e.demo.controller.Controller : error 
+09:22:42.244 DEBUG --- [http-nio-8080-exec-2] c.e.demo.controller.Controller : check page 1 
+09:22:42.244 DEBUG --- [http-nio-8080-exec-2] c.e.demo.controller.Controller : check page 1 
+09:22:42.244 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+09:22:42.244 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+09:22:42.244 TRACE --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+09:22:42.244 TRACE --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+09:22:42.245 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+09:22:42.245 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+09:22:42.245 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+09:22:42.246 TRACE --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:22:42.246 TRACE --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:22:42.246 TRACE --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+09:22:42.246 TRACE --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 44, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:22:42.246 DEBUG --- [http-nio-8080-exec-2] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+09:22:44.456 DEBUG --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.u_id = tb.u_id WHERE b_id = ? 
+09:22:44.456 DEBUG --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 3(Integer) 
+09:22:44.457 TRACE --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:22:44.457 TRACE --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:22:44.458 DEBUG --- [http-nio-8080-exec-3] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+09:22:44.458 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+09:22:44.459 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 3(Integer) 
+09:22:44.460 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+09:22:44.461 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.C.getAllComments : ==>  Preparing: SELECT * FROM lc_comment WHERE lc_comment.b_id = ? 
+09:22:44.461 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.C.getAllComments : ==> Parameters: 3(Integer) 
+09:22:44.461 TRACE --- [http-nio-8080-exec-3] c.e.d.m.C.getAllComments : <==    Columns: u_id, b_id, c_datetime, c_content, c_id 
+09:22:44.461 TRACE --- [http-nio-8080-exec-3] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:04:21, dddd, 4 
+09:22:44.462 TRACE --- [http-nio-8080-exec-3] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:04:40, hello, 5 
+09:22:44.462 TRACE --- [http-nio-8080-exec-3] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:27:03, new comment1, 6 
+09:22:44.462 TRACE --- [http-nio-8080-exec-3] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:27:09, new commmment2, 7 
+09:22:44.463 TRACE --- [http-nio-8080-exec-3] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:27:16, new commmmmmmmmmmmmmment3, 8 
+09:22:44.463 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.C.getAllComments : <==      Total: 5 
+09:23:02.800 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.CommentMapper.createComment : ==>  Preparing: INSERT INTO lc_comment ( c_content, u_id, b_id )VALUES ( ?, ?, ? ) 
+09:23:02.800 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.CommentMapper.createComment : ==> Parameters: break a leg(String), 3(String), 3(Integer) 
+09:23:02.804 DEBUG --- [http-nio-8080-exec-4] c.e.d.m.CommentMapper.createComment : <==    Updates: 1 
+09:23:02.808 DEBUG --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.u_id = tb.u_id WHERE b_id = ? 
+09:23:02.809 DEBUG --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 3(Integer) 
+09:23:02.809 TRACE --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:23:02.809 TRACE --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 3, 수정본, 3s3s, 2024-07-17 09:50:27, 49, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:23:02.809 DEBUG --- [http-nio-8080-exec-5] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+09:23:02.810 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+09:23:02.810 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 3(Integer) 
+09:23:02.811 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+09:23:02.812 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.C.getAllComments : ==>  Preparing: SELECT * FROM lc_comment WHERE lc_comment.b_id = ? 
+09:23:02.812 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.C.getAllComments : ==> Parameters: 3(Integer) 
+09:23:02.812 TRACE --- [http-nio-8080-exec-5] c.e.d.m.C.getAllComments : <==    Columns: u_id, b_id, c_datetime, c_content, c_id 
+09:23:02.812 TRACE --- [http-nio-8080-exec-5] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:04:21, dddd, 4 
+09:23:02.812 TRACE --- [http-nio-8080-exec-5] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:04:40, hello, 5 
+09:23:02.812 TRACE --- [http-nio-8080-exec-5] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:27:03, new comment1, 6 
+09:23:02.812 TRACE --- [http-nio-8080-exec-5] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:27:09, new commmment2, 7 
+09:23:02.812 TRACE --- [http-nio-8080-exec-5] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:27:16, new commmmmmmmmmmmmmment3, 8 
+09:23:02.813 TRACE --- [http-nio-8080-exec-5] c.e.d.m.C.getAllComments : <==        Row: 3, 3, 2024-08-06 09:23:02, break a leg, 12 
+09:23:02.813 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.C.getAllComments : <==      Total: 6 
+09:24:18.598 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : ==>  Preparing: SELECT * FROM lc_board ta LEFT JOIN lc_user tb ON ta.u_id = tb.u_id WHERE b_id = ? 
+09:24:18.598 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : ==> Parameters: 3(Integer) 
+09:24:18.599 TRACE --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==    Columns: b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:24:18.599 TRACE --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==        Row: 3, 수정본, 3s3s, 2024-07-17 09:50:27, 50, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:24:18.599 DEBUG --- [http-nio-8080-exec-8] c.e.d.mapper.BoardMapper.readBoard : <==      Total: 1 
+09:24:18.599 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : ==>  Preparing: UPDATE lc_board SET b_views = b_views+1 WHERE b_id = ? 
+09:24:18.600 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : ==> Parameters: 3(Integer) 
+09:24:18.603 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.BoardMapper.increaseViews : <==    Updates: 1 
+09:24:18.603 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : ==>  Preparing: SELECT * FROM lc_comment WHERE lc_comment.b_id = ? 
+09:24:18.603 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : ==> Parameters: 3(Integer) 
+09:24:18.604 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==    Columns: u_id, b_id, c_datetime, c_content, c_id 
+09:24:18.604 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:04:21, dddd, 4 
+09:24:18.604 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:04:40, hello, 5 
+09:24:18.604 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:27:03, new comment1, 6 
+09:24:18.604 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:27:09, new commmment2, 7 
+09:24:18.605 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==        Row: 1, 3, 2024-08-05 09:27:16, new commmmmmmmmmmmmmment3, 8 
+09:24:18.605 TRACE --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==        Row: 3, 3, 2024-08-06 09:23:02, break a leg, 12 
+09:24:18.605 DEBUG --- [http-nio-8080-exec-8] c.e.d.m.C.getAllComments : <==      Total: 6 
+09:24:20.420 DEBUG --- [http-nio-8080-exec-9] c.e.demo.controller.Controller : check page 1 
+09:24:20.420 DEBUG --- [http-nio-8080-exec-9] c.e.demo.controller.Controller : check page 1 
+09:24:20.421 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+09:24:20.421 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+09:24:20.421 TRACE --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+09:24:20.421 TRACE --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+09:24:20.421 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+09:24:20.422 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+09:24:20.422 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+09:24:20.423 TRACE --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+09:24:20.423 TRACE --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 51, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:24:20.423 TRACE --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+09:24:20.423 TRACE --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 44, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+09:24:20.424 DEBUG --- [http-nio-8080-exec-9] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 

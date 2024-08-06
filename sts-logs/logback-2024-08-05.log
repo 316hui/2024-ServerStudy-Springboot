@@ -2513,3 +2513,37 @@ java.lang.IllegalArgumentException: rawPassword cannot be null
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1570)
+11:48:55.448 DEBUG --- [http-nio-8080-exec-3] c.e.demo.controller.Controller : check page 1 
+11:48:55.448 DEBUG --- [http-nio-8080-exec-3] c.e.demo.controller.Controller : check page 1 
+11:48:55.448 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+11:48:55.449 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+11:48:55.449 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+11:48:55.449 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+11:48:55.449 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+11:48:55.449 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+11:48:55.449 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+11:48:55.450 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:48:55.450 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:48:55.450 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:48:55.451 TRACE --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 42, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:48:55.451 DEBUG --- [http-nio-8080-exec-3] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
+11:49:00.630 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : debug 
+11:49:00.630 DEBUG --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : debug 
+11:49:00.630 INFO  --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : info 
+11:49:00.630 INFO  --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : info 
+11:49:00.630 ERROR --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : error 
+11:49:00.630 ERROR --- [http-nio-8080-exec-4] c.e.demo.controller.Controller : error 
+11:49:00.635 DEBUG --- [http-nio-8080-exec-5] c.e.demo.controller.Controller : check page 1 
+11:49:00.635 DEBUG --- [http-nio-8080-exec-5] c.e.demo.controller.Controller : check page 1 
+11:49:00.636 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : ==>  Preparing: SELECT COUNT(*) FROM lc_board 
+11:49:00.636 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : ==> Parameters:  
+11:49:00.636 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==    Columns: COUNT(*) 
+11:49:00.636 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==        Row: 8 
+11:49:00.636 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getboardsCount : <==      Total: 1 
+11:49:00.637 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : ==>  Preparing: SELECT @ROWNUM := @ROWNUM -1 AS ROWNUM, ta.*, tc.* FROM lc_board ta INNER JOIN (SELECT @ROWNUM := (SELECT COUNT(*)-?+1 FROM lc_board ta)) tb ON 1=1 LEFT JOIN lc_user tc ON ta.u_id = tc.u_id LIMIT ?, ? 
+11:49:00.637 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : ==> Parameters: 0(Integer), 0(Integer), 3(Integer) 
+11:49:00.638 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==    Columns: ROWNUM, b_id, b_title, b_content, b_datetime, b_views, u_id, u_id, u_password, u_name, u_datetime, u_isAccountNonExpired, u_isAccountNonLocked, u_isCredentialNonExpired, u_isEnabled 
+11:49:00.638 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 8, 3, 수정본, 3s3s, 2024-07-17 09:50:27, 48, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:49:00.638 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 7, 4, wwwwwdfjkljl, 내용22, 2024-07-25 11:28:19, 15, 1, 1, $2a$10$MGEXfwI9hdVC8HguAEcCv.gDKKCszqq3W9c915Ao/syPgksNpSxK6, zz5, 2024-07-18 11:01:40, 1, 1, 1, 1 
+11:49:00.638 TRACE --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==        Row: 6, 5, ddd, dddd, 2024-07-25 11:37:17, 42, 22, 22, $2a$10$nj8Nb4uaQgKUdo2g6QZgXeP3iHd8xiQ1ujYIHidhE6SNuoOtuDkN., yejii, 2024-07-18 10:25:17, 1, 1, 1, 1 
+11:49:00.638 DEBUG --- [http-nio-8080-exec-5] c.e.d.m.BoardMapper.getAllBoards : <==      Total: 3 
